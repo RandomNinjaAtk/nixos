@@ -25,7 +25,7 @@
     thunderbird
     discord
     signal-desktop
-    nextcloud-desktop
+    nextcloud-client
   ];
   
   # programs
