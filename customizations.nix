@@ -18,7 +18,7 @@
 
   # packages
   environment.systemPackages = with pkgs; [
-    kate
+    vscode
     htop
     wget
     curl
