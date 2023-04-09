@@ -23,6 +23,9 @@
     curl
     firefox
     thunderbird
+    discord
+    signal-desktop
+    nextcloud-desktop
   ];
   
   # programs
