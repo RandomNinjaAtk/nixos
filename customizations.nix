@@ -5,6 +5,7 @@
   
   # hardware enablement
   hardware.bluetooth.enable = true; # enable bluetooth
+  hardware.uinput.enable = true; # enable uinput
   
   # networking
   networking.firewall.enable = false;
