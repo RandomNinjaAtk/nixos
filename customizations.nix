@@ -12,6 +12,9 @@
   # services
   services.flatpak.enable = true; # flatpak
   services.hardware.openrgb.enable = true; # openrgb
+  
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # packages
   environment.systemPackages = with pkgs; [
@@ -23,5 +26,9 @@
   ];
   
   # programs
-  programs.steam.enable = true; # add steam
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  }; # stean
 }
