@@ -1,7 +1,6 @@
 {pkgs, ...}: {
 
   environment.systemPackages = with pkgs; [ sunshine ];
-  programs.singularity.enable = true;
   services.udev.enable = true;
   services.udev.extraRules = ''
     # Your rule goes here
