@@ -18,6 +18,7 @@
 
   # packages
   environment.systemPackages = with pkgs; [
+    kate
     htop
     wget
     curl
