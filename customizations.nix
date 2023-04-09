@@ -18,6 +18,7 @@
 
   # packages
   environment.systemPackages = with pkgs; [
+    mlocate
     vscode
     htop
     wget
