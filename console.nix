@@ -1,6 +1,6 @@
 {pkgs, ...}: {
 
   # Programs
-  programs.streamdeck-ui.autoStart = true;
+  #programs.streamdeck-ui.autoStart = true;
 
 }
