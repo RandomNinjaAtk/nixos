@@ -11,6 +11,7 @@
   networking.firewall.enable = false;
   
   # services
+  services.openssh.enable = true; # ssh server
   services.flatpak.enable = true; # flatpak
   services.hardware.openrgb.enable = true; # openrgb
   
