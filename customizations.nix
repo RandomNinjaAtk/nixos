@@ -29,6 +29,7 @@
     discord
     signal-desktop
     nextcloud-client
+    gping
   ];
   
   # programs
