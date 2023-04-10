@@ -14,5 +14,5 @@
 
 # Notes
 
-# Resolution Change Exmaple:
+# Resolution Change Exmaple for Sunshine:
 # gnome-randr modify DP-4 --mode 1920x1080@120.000 # Change to 1080p
