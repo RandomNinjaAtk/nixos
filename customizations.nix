@@ -1,7 +1,7 @@
 {pkgs, ...}: {
 
   # boot changes
-  boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
+  # boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   
   # hardware enablement
   hardware.bluetooth.enable = true; # enable bluetooth
