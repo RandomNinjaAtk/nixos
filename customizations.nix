@@ -30,6 +30,7 @@
     signal-desktop
     nextcloud-client
     gping
+    wayvnc
   ];
   
   # programs
