@@ -1,6 +1,8 @@
 {pkgs, ...}: {
 
-  # Programs
-  #programs.streamdeck-ui.autoStart = true;
+  # packages
+  environment.systemPackages = with pkgs; [
+    gamescope
+  ];
 
 }
