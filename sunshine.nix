@@ -37,3 +37,6 @@
     ];
   };
 }
+
+# Get Service Status
+# systemctl --user restart sunshine.service
