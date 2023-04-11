@@ -32,7 +32,7 @@
     nextcloud-client
     gping
     wayvnc
-    etcher
+    rpi-imager
   ];
   
   # programs
