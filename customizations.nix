@@ -32,6 +32,7 @@
     nextcloud-client
     gping
     wayvnc
+    etcher
   ];
   
   # programs
