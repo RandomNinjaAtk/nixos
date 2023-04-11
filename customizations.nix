@@ -33,6 +33,7 @@
     gping
     wayvnc
     rpi-imager
+    appimage-run
   ];
   
   # programs
