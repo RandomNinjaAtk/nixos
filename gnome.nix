@@ -7,7 +7,7 @@
   # packages
   environment.systemPackages = with pkgs; [
     gnomeExtensions.dash-to-panel
-    gnomeExtensions.gtile
+    gnomeExtensions.tiling-assistant
     gnome-randr
   ];
 
