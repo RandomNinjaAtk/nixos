@@ -7,6 +7,7 @@
   # packages
   environment.systemPackages = with pkgs; [
     gnomeExtensions.dash-to-panel
+    gnomeExtensions.paperwm
     gnome-randr
   ];
 
