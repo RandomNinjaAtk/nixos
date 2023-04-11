@@ -6,6 +6,7 @@
   # hardware enablement
   hardware.bluetooth.enable = true; # enable bluetooth
   hardware.uinput.enable = true; # enable uinput
+  hardware.opengl.enable = true; # enable opengl support
   
   # networking
   networking.firewall.enable = false;
@@ -14,6 +15,7 @@
   services.openssh.enable = true; # ssh server
   services.flatpak.enable = true; # flatpak
   services.hardware.openrgb.enable = true; # openrgb
+  services.fwupd.enable = true; # firmware updates
   
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
