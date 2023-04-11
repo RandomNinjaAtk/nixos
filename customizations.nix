@@ -16,6 +16,7 @@
   services.flatpak.enable = true; # flatpak
   services.hardware.openrgb.enable = true; # openrgb
   services.fwupd.enable = true; # firmware updates
+  services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
   
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
