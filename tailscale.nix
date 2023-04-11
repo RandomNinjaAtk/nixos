@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
   # make the tailscale command usable to users
   environment.systemPackages = [ pkgs.tailscale ];
 
@@ -34,5 +32,4 @@
       ${tailscale}/bin/tailscale up -authkey tskey-examplekeyhere
     '';
   };
-
 }
