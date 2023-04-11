@@ -4,8 +4,14 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
     
-  # packages
+  # package exclusions
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-console
+  ];
+  
+  # package additions
   environment.systemPackages = with pkgs; [
+    gnome.gnome-terminal
     gnomeExtensions.dash-to-panel
     gnomeExtensions.tiling-assistant
     gnome-randr
