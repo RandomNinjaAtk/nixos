@@ -15,7 +15,6 @@
     gnomeExtensions.dash-to-panel
     gnomeExtensions.tiling-assistant
     gnome-randr # Resolution Changer
-    gnome.vinagre # RDP Client
     remmina # RDP Client
   ];
 
