@@ -7,6 +7,7 @@
   hardware.bluetooth.enable = true; # enable bluetooth
   hardware.uinput.enable = true; # enable uinput
   hardware.opengl.enable = true; # enable opengl support
+  hardware.opengl.driSupport = true; # enable accelerated OpenGL rendering 
   
   # networking
   networking.firewall.enable = false;
