@@ -8,6 +8,7 @@
   hardware.uinput.enable = true; # enable uinput
   hardware.opengl.enable = true; # enable opengl support
   hardware.opengl.driSupport = true; # enable accelerated OpenGL rendering 
+  hardware.steam-hardware.enable = true; # steam hardware
   
   # networking
   networking.firewall.enable = false;
