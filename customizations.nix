@@ -41,7 +41,6 @@
   ];
   
   # programs
-  programs.sway.enable = true; # wayland support
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
