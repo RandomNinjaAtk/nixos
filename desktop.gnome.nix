@@ -16,6 +16,7 @@
     gnomeExtensions.tiling-assistant
     gnome-randr # Resolution Changer
     remmina # RDP Client
+    gnome-firmware
   ];
 
 }
