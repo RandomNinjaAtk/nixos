@@ -12,6 +12,8 @@
   networking.firewall.enable = false;
   
   # services
+  programs.sway.enable = true; # wayland support
+  xdg.portal.wlr.enable = true; # wayland compositor for screensharing
   services.openssh.enable = true; # ssh server
   services.flatpak.enable = true; # flatpak
   services.hardware.openrgb.enable = true; # openrgb
