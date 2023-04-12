@@ -10,8 +10,8 @@
   # services
   services.xserver.videoDrivers = ["amdgpu"]; # amd gpu support radv
   
- # packages   
- environment.systemPackages = with pkgs; [
+  # packages   
+  environment.systemPackages = with pkgs; [
     # Top-like tool for viewing AMD Radeon GPU utilization
     radeontop
   ];
