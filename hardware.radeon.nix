@@ -29,7 +29,7 @@
     ];
   };
    
-  user.packages = with pkgs; [
+ environment.systemPackages = with pkgs; [
     # Inspect and manipulate PCI devices
     pciutils
     # Print all known information about all available OpenCL platforms and devices in the system
@@ -38,18 +38,6 @@
     radeontop
     # Application to read current clocks of AMD Radeon cards
     radeon-profile
-    # ROCm Application for Reporting System Info
-    rocminfo
-    # System management interface for AMD GPUs supported by ROCm
-    rocm-smi
-    # Platform runtime for ROCm
-    rocm-runtime
-    # OpenCL runtime for AMD GPUs, part of the ROCm stack
-    rocm-opencl-runtime
-    # CMake modules for common build tasks for the ROCm stack
-    rocm-cmake
-    # Radeon open compute thunk interface
-    rocm-thun
   ];
 }
 
