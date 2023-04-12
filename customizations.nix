@@ -9,12 +9,13 @@
   hardware.opengl.enable = true; # enable opengl support
   hardware.opengl.driSupport = true; # enable accelerated OpenGL rendering 
   hardware.steam-hardware.enable = true; # steam hardware
-  
+    
   # networking
   networking.firewall.enable = false;
   
   # services
   services.openssh.enable = true; # ssh server
+  services.fprintd.enable = true; # finger print reader
   services.flatpak.enable = true; # flatpak
   services.hardware.openrgb.enable = true; # openrgb
   services.fwupd.enable = true; # firmware updates
