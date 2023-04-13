@@ -1,4 +1,11 @@
-{pkgs, ...}: {
+{pkgs, ...}:
+let
+  unstable = import (import ./nixpkgs-src.nix).unstable { config = {allowUnfree = true; }; };
+  #my_steam = (pkgs.steam.override { nativeOnly = true; });
+  my_steam = unstable.steam;
+  steam_autostart = (pkgs.makeAutostartItem { name = "steam"; package = my_steam; });
+in
+{
   
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -13,6 +20,9 @@
   # packages
   environment.systemPackages = with pkgs; [
     # gamescope
+    my_steam
+    steam_autostart
+    steam-run
   ];
 
   # autologin workaround (https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229)
