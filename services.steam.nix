@@ -1,40 +1,21 @@
 {pkgs, ...}: {
-
-  environment.systemPackages = with pkgs; [ steam ];
-  services.udev.enable = true;
-  services.udev.extraRules = ''
-    # Your rule goes here
-    KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
-  '';
-
-  security.wrappers = {
-    steam = {
-      source = "${pkgs.steam}/bin/steam";
-      capabilities = "cap_sys_admin+ep";
-      owner = "root";
-      group = "root";
-    };
-  }; 
-
+ 
+ # programs
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  }; # steam
 
   systemd.user.services.steam = {
-    script = "/run/current-system/sw/bin/env /run/wrappers/bin/steam steam://open/bigpicture";
-
-    unitConfig = {
-      Description = "Steam is a gaming service";
-      StartLimitIntervalSec = 500;
-      StartLimitBurst = 5;
-    };
+    description = "Start steam big picture";
+    wantedBy = [ "graphical-session.target" ];
 
     serviceConfig = {
-      Environment = "WAYLAND_DISPLAY=wayland-1";
-      # auto restart
-      Restart = "on-failure";
+      Restart = "always";
       RestartSec = "5s";
+      ExecStart = "${pkgs.steam}/bin/steam steam://open/big/picture";
     };
-    wantedBy = [ 
-      "graphical-session.target"
-    ];
   };
 }
 
