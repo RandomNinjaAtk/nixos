@@ -1,8 +1,6 @@
 {pkgs, ...}:
 let
-  unstable = import (import ./nixpkgs-src.nix).unstable { config = {allowUnfree = true; }; };
-  #my_steam = (pkgs.steam.override { nativeOnly = true; });
-  my_steam = unstable.steam;
+  my_steam = steam;
   steam_autostart = (pkgs.makeAutostartItem { name = "steam"; package = my_steam; });
 in
 {
