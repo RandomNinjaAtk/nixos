@@ -1,25 +1,27 @@
-{pkgs, ...}:
-let
-  steam_autostart = (pkgs.makeAutostartItem { name = "steam"; package = pkgs.steam; });
-in
-{
+{pkgs, ...}: {
   
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   
-  # Enable the GNOME Desktop Environment  
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
+  # Enable the Desktop Environment  
+  # Cinnamon
+  services.xserver.desktopManager.cinnamon.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  # KDE
+  #services.xserver.desktopManager.plasma5.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
+  # GNOME
+  #services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.displayManager.gdm.enable = true;
+  
+  # Auto Login
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "gamer";
   
   
   # packages
   environment.systemPackages = with pkgs; [
-    # gamescope
-    steam
-    steam_autostart
-    steam-run
+    gamescope
   ];
 
   # autologin workaround (https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229)
