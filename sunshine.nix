@@ -4,9 +4,9 @@
   environment.systemPackages = with pkgs; [ sunshine ];
   
   systemd.user.services.sunshine = {
-    Description = "Sunshine self-hosted game stream host for Moonlight.";
-    StartLimitIntervalSec = 500;
-    StartLimitBurst = 5;
+    description = "Sunshine self-hosted game stream host for Moonlight.";
+    startLimitIntervalSec = 500;
+    startLimitBurst = 5;
     wantedBy = [ "graphical-session.target" ];
 
     serviceConfig = {
@@ -18,4 +18,4 @@
 }
 
 # Get Service Status
-# systemctl --user restart sunshine.service
+# systemctl --user restart sunshine
