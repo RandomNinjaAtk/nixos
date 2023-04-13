@@ -15,7 +15,6 @@
     wantedBy = [ "graphical-session.target" ];
 
     serviceConfig = {
-      Environment = "DISPLAY=':0'";
       Restart = "always";
       RestartSec = "5s";
       ExecStart = "${pkgs.steam}/bin/steam steam://open/big/picture";
