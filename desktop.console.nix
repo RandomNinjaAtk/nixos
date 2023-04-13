@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-
   
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -10,9 +9,13 @@
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "gamer";
   
+  
   # packages
   environment.systemPackages = with pkgs; [
     # gamescope
   ];
 
+  # autologin workaround
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
 }
