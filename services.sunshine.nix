@@ -27,7 +27,7 @@
     };
 
     serviceConfig = {
-      Environment = "WAYLAND_DISPLAY=wayland-1";
+      Environment = "WAYLAND_DISPLAY=wayland-0";
       # auto restart
       Restart = "on-failure";
       RestartSec = "5s";
@@ -39,4 +39,4 @@
 }
 
 # Get Service Status
-# systemctl --user restart sunshine.service
+# systemctl --user status sunshine
