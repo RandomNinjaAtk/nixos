@@ -1,8 +1,9 @@
 {pkgs, ...}: {
 
+  # Install sunshine
   environment.systemPackages = with pkgs; [ sunshine ];
   
-  systemd.user.services.steam = {
+  systemd.user.services.sunshine = {
     Description = "Sunshine self-hosted game stream host for Moonlight.";
     StartLimitIntervalSec = 500;
     StartLimitBurst = 5;
