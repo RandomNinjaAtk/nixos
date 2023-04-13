@@ -3,9 +3,9 @@
   environment.systemPackages = with pkgs; [ sunshine ];
   
   systemd.user.services.steam = {
-    Description=Sunshine self-hosted game stream host for Moonlight.
-    StartLimitIntervalSec=500
-    StartLimitBurst=5
+    Description = "Sunshine self-hosted game stream host for Moonlight.";
+    StartLimitIntervalSec = 500;
+    StartLimitBurst = 5;
     wantedBy = [ "graphical-session.target" ];
 
     serviceConfig = {
