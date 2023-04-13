@@ -1,7 +1,6 @@
 {pkgs, ...}:
 let
-  my_steam = steam;
-  steam_autostart = (pkgs.makeAutostartItem { name = "steam"; package = my_steam; });
+  steam_autostart = (pkgs.makeAutostartItem { name = "steam"; package = pkgs.steam; });
 in
 {
   
@@ -18,7 +17,7 @@ in
   # packages
   environment.systemPackages = with pkgs; [
     # gamescope
-    my_steam
+    steam
     steam_autostart
     steam-run
   ];
