@@ -38,6 +38,7 @@
     wayvnc
     rpi-imager
     appimage-run
+    vmware-horizon-client
   ];
   
   # programs
