@@ -13,9 +13,11 @@
   systemd.user.services.steam = {
     description = "Start steam big picture";
     wantedBy = [ "graphical-session.target" ];
+    startLimitIntervalSec = 500;
+    startLimitBurst = 5;
 
     serviceConfig = {
-      Restart = "always";
+      Restart = "on-failure";
       RestartSec = "5s";
       ExecStart = "${pkgs.steam}/bin/steam steam://open/big/picture";
     };
