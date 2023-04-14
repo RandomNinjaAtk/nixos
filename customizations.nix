@@ -18,6 +18,14 @@
   services.hardware.openrgb.enable = true; # openrgb
   services.fwupd.enable = true; # firmware updates
   services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    publish.enable = true;
+    publish.addresses = true;
+    publish.workstation = true;
+  };
+
   
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
