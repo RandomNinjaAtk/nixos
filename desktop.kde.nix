@@ -21,4 +21,6 @@
 
 # Notes
 # Resolution Change Exmaple for Sunshine:
-# xrandr --output DP-4 --mode 1920x1080 --rate 60 # Change to 1080p @ 60hz
+# kscreen-doctor output.DP-2.mode.1920x1080@120
+# kscreen-doctor output.DP-2.mode.3440x1440@144
+# xrandr --output DP-2 --mode 1920x1080 --rate 60 # Change to 1080p @ 60hz
