@@ -40,3 +40,5 @@
 
 # Get Service Status
 # systemctl --user status sunshine
+# get logs
+# journalctl --user -u sunshine --since "2 minutes ago"
