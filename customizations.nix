@@ -3,6 +3,9 @@
   # boot changes
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   
+  # System
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-unstable/";
+  
   # hardware enablement
   hardware.bluetooth.enable = true; # enable bluetooth
   hardware.uinput.enable = true; # enable uinput
