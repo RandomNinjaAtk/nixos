@@ -1,4 +1,8 @@
 #!/usr/bin/bash
+# Setup:
+# Add imports.desktop.nix as ./imports.desktop.nix to imports section of the configuration.nix file in /etc/nixos/
+# Usage:
+# Run the following command: curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/setup.desktop.bash | bash
 
 # channel
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/channel.unstable.nix -O /etc/nixos/
