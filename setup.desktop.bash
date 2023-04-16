@@ -17,6 +17,9 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshi
 # other
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/customizations.nix -O /etc/nixos/
 
+# imports
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/imports.desktop.nix -O /etc/nixos/
+
 # rebuild
 nixos-rebuild --upgrade-all boot
 exit
