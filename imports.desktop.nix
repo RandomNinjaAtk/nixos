@@ -6,6 +6,7 @@
       ./hardware.audio.nix
       ./hardware.radeon.nix
       ./hardware.bluetooth.nix
+      ./hardware.razer.nix
       ./services.sunshine.nix
       ./customizations.nix
     ];
