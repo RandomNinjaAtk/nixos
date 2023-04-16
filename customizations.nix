@@ -4,7 +4,6 @@
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
     
   # hardware enablement
-  hardware.bluetooth.enable = true; # enable bluetooth
   hardware.uinput.enable = true; # enable uinput
   hardware.steam-hardware.enable = true; # steam hardware
     
