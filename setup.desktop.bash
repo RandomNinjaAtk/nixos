@@ -14,5 +14,9 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.blueto
 # services
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O /etc/nixos/
 
-#
+# other
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/customizations.nix -O /etc/nixos/
+
+# rebuild
 nixos-rebuild --upgrade-all boot
+exit
