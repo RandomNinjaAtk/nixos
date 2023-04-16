@@ -4,16 +4,10 @@
   services.xserver.enable = true;
   
   # Enable the Desktop Environment  
-  # Cinnamon
-  #services.xserver.desktopManager.cinnamon.enable = true;
-  #services.xserver.displayManager.lightdm.enable = true;
   # KDE
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.displayManager.defaultSession = "plasmawayland";
-  # GNOME
-  #services.xserver.desktopManager.gnome.enable = true;
-  #services.xserver.displayManager.gdm.enable = true;
   
   # Auto Login
   services.xserver.displayManager.autoLogin.enable = true;
