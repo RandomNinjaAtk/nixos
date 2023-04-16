@@ -14,6 +14,7 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/desktop.kde.nix
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.audio.nix -O /etc/nixos/
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.radeon.nix -O /etc/nixos/
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.bluetooth.nix -O /etc/nixos/
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.razer.nix -O /etc/nixos/
 
 # services
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O /etc/nixos/
