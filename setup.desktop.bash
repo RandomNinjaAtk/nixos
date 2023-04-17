@@ -6,6 +6,9 @@
 
 cd /etc/nixos
 
+# kernel
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/kernel.nix -O
+
 # channel
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/channel.unstable.nix -O
 
