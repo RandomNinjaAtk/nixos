@@ -18,6 +18,9 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.radeon
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.bluetooth.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.razer.nix -O
 
+# networking
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/networking.nix -O
+
 # services
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.openrgb.nix -O
