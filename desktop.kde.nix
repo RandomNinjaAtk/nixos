@@ -16,6 +16,9 @@
   environment.systemPackages = with pkgs; [
     kate
   ];
+  
+  # other
+  xdg.portal.wlr.enable = true; # wayland compositor for screensharing
 }
 
 
