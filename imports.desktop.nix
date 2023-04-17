@@ -10,6 +10,7 @@
       ./services.sunshine.nix
       ./services.openrgb.nix
       ./packages.desktop.nix
+      ./networking.nix
       ./customizations.nix
     ];
 }
