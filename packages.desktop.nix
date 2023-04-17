@@ -7,6 +7,7 @@
   services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
   
   # programs
+  hardware.steam-hardware.enable = true; # steam hardware
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
