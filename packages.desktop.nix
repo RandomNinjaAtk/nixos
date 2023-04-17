@@ -31,5 +31,6 @@
     appimage-run
     vmware-horizon-client
     vlc
+    plex-media-player
   ];
 }
