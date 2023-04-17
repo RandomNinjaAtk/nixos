@@ -9,6 +9,7 @@
       ./hardware.razer.nix
       ./services.sunshine.nix
       ./services.openrgb.nix
+      ./packages.desktop.nix
       ./customizations.nix
     ];
 }
