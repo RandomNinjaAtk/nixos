@@ -17,7 +17,7 @@
     startLimitBurst = 5;
 
     serviceConfig = {
-      Restart = "on-failure";
+      Restart = "always";
       RestartSec = "5s";
       ExecStart = "${pkgs.steam}/bin/steam steam://open/big/picture";
     };
