@@ -6,6 +6,9 @@
 
 cd /etc/nixos
 
+# kernel
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/kernel.nix -O
+
 # channel
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/channel.unstable.nix -O
 
@@ -16,9 +19,14 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/desktop.kde.nix
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.audio.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.radeon.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.bluetooth.nix -O
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.razer.nix -O
+
+# networking
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/networking.nix -O
 
 # services
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.openrgb.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.steam.nix -O
 
 # imports
