@@ -17,5 +17,6 @@
     wayvnc
     appimage-run
     vlc
+    plex-media-player
   ];
 }
