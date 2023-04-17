@@ -2,6 +2,9 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  
+  # Remove packages
+  services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
 
   # packages
   environment.systemPackages = with pkgs; [
