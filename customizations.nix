@@ -6,22 +6,11 @@
   # hardware enablement
   hardware.uinput.enable = true; # enable uinput
   hardware.steam-hardware.enable = true; # steam hardware
-    
-  # networking
-  networking.firewall.enable = false;
-  
-  # services
-  services.openssh.enable = true; # ssh server
+      
   services.fprintd.enable = true; # finger print reader
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
-  services.avahi = {
-    enable = true;
-    nssmdns = true;
-    publish.enable = true;
-    publish.addresses = true;
-    publish.workstation = true;
-  };
+  
 
 
   
