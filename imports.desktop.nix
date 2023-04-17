@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   imports =
     [ 
+      ./kernel.nix
       ./channel.unstable.nix
       ./desktop.kde.nix
       ./hardware.audio.nix
