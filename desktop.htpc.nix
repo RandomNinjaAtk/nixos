@@ -12,7 +12,9 @@
   # Auto Login
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "gamer";
-  
+    
+  services.flatpak.enable = true; # flatpak
+  services.fwupd.enable = true; # firmware updates
   
   # packages
   environment.systemPackages = with pkgs; [
