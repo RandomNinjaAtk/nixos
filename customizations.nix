@@ -14,9 +14,7 @@
   services.openssh.enable = true; # ssh server
   services.fprintd.enable = true; # finger print reader
   services.flatpak.enable = true; # flatpak
-  services.hardware.openrgb.enable = true; # openrgb
   services.fwupd.enable = true; # firmware updates
-  services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
   services.avahi = {
     enable = true;
     nssmdns = true;
