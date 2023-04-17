@@ -1,12 +1,17 @@
 { config, pkgs, ... }: {
   imports =
     [ 
-      ./channel.unstable.nix
       ./desktop.htpc.nix
+      ./packages.htpc.nix
+      ./kernel.nix
+      ./channel.unstable.nix
       ./hardware.audio.nix
       ./hardware.radeon.nix
       ./hardware.bluetooth.nix
+      ./hardware.razer.nix
       ./services.sunshine.nix
-      ./services.steam.nix
+      ./services.openrgb.nix
+      ./packages.desktop.nix
+      ./networking.nix
     ];
 }
