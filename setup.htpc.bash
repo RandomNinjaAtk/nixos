@@ -29,6 +29,9 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshi
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.openrgb.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.steam.nix -O
 
+# packages
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/packages.htpc.nix -O
+
 # imports
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/imports.htpc.nix -O
 
