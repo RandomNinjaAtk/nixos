@@ -21,6 +21,10 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.razer.
 # services
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.openrgb.nix -O
+
+# packages
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/packages.desktop.nix -O
+
 # other
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/customizations.nix -O
 
