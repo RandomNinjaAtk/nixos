@@ -1,7 +1,10 @@
 {pkgs, ...}: {
 
+  # install dependencies
   environment.systemPackages = with pkgs; [ sunshine ];
+  hardware.uinput.enable = true; # enable uinput  
   services.udev.enable = true;
+ 
   services.udev.extraRules = ''
     # Your rule goes here
     KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
