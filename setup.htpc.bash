@@ -35,6 +35,9 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/packages.htpc.n
 # imports
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/imports.htpc.nix -O
 
+# other
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/customizations.nix -O
+
 # rebuild
 nixos-rebuild --upgrade-all boot
 exit
