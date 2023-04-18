@@ -11,7 +11,7 @@
       ./hardware.razer.nix
       ./services.sunshine.nix
       ./services.openrgb.nix
-      ./services.steam.nix
+      #./services.steam.nix
       ./networking.nix
       ./customizations.nix
     ];
