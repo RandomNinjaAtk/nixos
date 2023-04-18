@@ -7,7 +7,7 @@
   # KDE
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.defaultSession = "plasma-big-screen-wayland"; #plasmawayland or plasma-big-screen-wayland
+  services.xserver.displayManager.defaultSession = "plasma-bigscreen-wayland"; #plasmawayland or plasma-bigscreen-wayland
   services.xserver.desktopManager.plasma5.bigscreen.enable = true;
   
   # Auto Login
