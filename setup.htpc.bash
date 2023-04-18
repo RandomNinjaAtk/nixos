@@ -13,7 +13,7 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/kernel.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/channel.unstable.nix -O
 
 # desktop
-curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/desktop.kde.nix -O
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/desktop.htpc.nix -O
 
 # hardware
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.audio.nix -O
