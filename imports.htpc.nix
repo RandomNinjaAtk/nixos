@@ -13,5 +13,6 @@
       ./services.openrgb.nix
       ./services.steam.nix
       ./networking.nix
+      ./customizations.nix
     ];
 }
