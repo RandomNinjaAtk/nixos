@@ -32,5 +32,6 @@
     vmware-horizon-client
     vlc
     plex-media-player
+    ungoogled-chromium
   ];
 }
