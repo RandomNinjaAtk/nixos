@@ -9,6 +9,7 @@
       ./hardware.radeon.nix
       ./hardware.bluetooth.nix
       ./hardware.razer.nix
+      ./enable.printing.nix
       ./services.sunshine.nix
       ./services.openrgb.nix
       ./networking.nix
