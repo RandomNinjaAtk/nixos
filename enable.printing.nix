@@ -8,7 +8,13 @@
   # additional drivers
   services.printing.drivers = [ 
     pkgs.gutenprint
-    pkgs.gutenprintBin 
+    pkgs.gutenprintBin
+    pkgs.hplip # HP printers.
+    pkgs.postscript-lexmark # Postscript drivers for Lexmark
+    pkgs.samsung-unified-linux-driver # Proprietary Samsung Drivers
+    pkgs.splix # Samsung Printer Language
+    pkgs.brlaser # Brother Printers
+    pkgs.cnijfilter2 # Cannon Proprietary 
   ];
 }
 
