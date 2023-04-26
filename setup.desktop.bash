@@ -24,6 +24,9 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hardware.razer.
 # networking
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/networking.nix -O
 
+# printing
+curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/enable.printing.nix -O
+
 # services
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.openrgb.nix -O
