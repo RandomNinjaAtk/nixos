@@ -31,7 +31,7 @@ echo "Done"
 
 # networking
 echo "Getting Network configurations"
-curl -s https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/networking.nix -O\
+curl -s https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/networking.nix -O
 echo "Done"
 
 # printing
