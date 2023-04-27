@@ -62,10 +62,10 @@ echo "Done"
 
 # rebuild
 echo "Performing NixOS garbage collection, older than 5 days..."
-nix-collect-garbage --delete-older-than 5d
+nix-collect-garbage --delete-older-than 5d 1> /dev/null
 echo "Done"
 echo "Performing NixOS Rebuild, Upgrade and Boot..."
-nixos-rebuild --upgrade-all boot
+nixos-rebuild --upgrade-all boot 1> /dev/null
 echo "Done"
 echo "Reboot system for changes to take affect..."
 echo "Exiting...."
