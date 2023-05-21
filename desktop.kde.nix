@@ -9,6 +9,11 @@
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.displayManager.defaultSession = "plasmawayland";
   services.xserver.desktopManager.plasma5.bigscreen.enable = true;
+  
+  # Enable RDP
+  services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "startplasma-x11";
+  networking.firewall.allowedTCPPorts = [ 3389 ];
 
   # Programs 
   programs.kdeconnect.enable = true;
