@@ -12,6 +12,7 @@
       ./enable.printing.nix
       ./services.sunshine.nix
       ./services.openrgb.nix
+      ./services.cockpit.nix
       ./networking.nix
       ./customizations.nix
     ];
