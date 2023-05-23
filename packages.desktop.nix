@@ -33,5 +33,6 @@
     vlc
     plex-media-player
     ungoogled-chromium
+    rustdesk
   ];
 }
