@@ -34,5 +34,6 @@
     plex-media-player
     ungoogled-chromium
     rustdesk
+    zoom-us
   ];
 }
