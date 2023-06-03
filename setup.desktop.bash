@@ -81,7 +81,7 @@ flatpak -y install flathub \
   org.videolan.VLC \
   org.kde.kwrite \
   tv.plex.PlexHTPC \
-  com.plexamp.Plexamp
+  com.plexamp.Plexamp \
   com.github.iwalton3.jellyfin-media-player \
   org.mozilla.Thunderbird \
   org.mozilla.firefox \
