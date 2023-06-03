@@ -70,27 +70,29 @@ echo "Done"
 
 echo "Setting up flatpak"
 flatpak -y remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak -y install flathub dev.lizardbyte.app.Sunshine -y
 flatpak -y override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
-flatpak -y install flathub com.valvesoftware.Steam
-flatpak -y install flathub com.valvesoftware.SteamLink
-flatpak -y install flathub com.discordapp.Discord
-flatpak -y install flathub org.signal.Signal
-flatpak -y install flathub org.gnome.Boxes
-flatpak -y install flathub org.videolan.VLC
-flatpak -y install flathub org.kde.kwrite
-flatpak -y install flathub tv.plex.PlexHTPC
-flatpak -y install flathub com.plexamp.Plexamp
-flatpak -y install flathub com.github.iwalton3.jellyfin-media-player
-flatpak -y install flathub org.mozilla.Thunderbird
-flatpak -y install flathub org.mozilla.firefox
-flatpak -y install flathub com.github.Eloston.UngoogledChromium
-flatpak -y install flathub net.mediaarea.MediaInfo
-flatpak -y install flathub com.bitwarden.desktop
-flatpak -y install flathub io.otsaloma.nfoview
-flatpak -y install flathub xyz.z3ntu.razergenie
-flatpak -y install flathub org.kde.kontact
-flatpak -y install flathub hu.kramo.Cartridges
+flatpak -y install flathub \
+  dev.lizardbyte.app.Sunshine \
+  com.valvesoftware.Steam \
+  com.valvesoftware.SteamLink \
+  com.discordapp.Discord \
+  org.signal.Signal \
+  org.gnome.Boxes \
+  org.videolan.VLC \
+  org.kde.kwrite \
+  tv.plex.PlexHTPC \
+  com.plexamp.Plexamp
+  com.github.iwalton3.jellyfin-media-player \
+  org.mozilla.Thunderbird \
+  org.mozilla.firefox \
+  com.github.Eloston.UngoogledChromium \
+  net.mediaarea.MediaInfo \
+  com.bitwarden.desktop \
+  io.otsaloma.nfoview \
+  xyz.z3ntu.razergenie \
+  org.kde.kontact \
+  hu.kramo.Cartridges
+flatpak -y override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
 
 echo "Reboot system for changes to take affect..."
