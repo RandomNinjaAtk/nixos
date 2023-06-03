@@ -17,13 +17,10 @@
     htop
     wget
     curl
-    nextcloud-client
     gping
     wayvnc
-    rpi-imager
     appimage-run
     vmware-horizon-client
     rustdesk
-    zoom-us
   ];
 }
