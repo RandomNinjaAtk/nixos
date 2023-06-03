@@ -41,7 +41,6 @@ echo "Done"
 
 # services
 echo "Getting Services configurations"
-curl -s https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O
 curl -s https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.openrgb.nix -O
 curl -s https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.cockpit.nix -O
 echo "Done"
