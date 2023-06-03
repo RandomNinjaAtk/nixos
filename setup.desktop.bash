@@ -67,6 +67,32 @@ echo "Done"
 echo "Performing NixOS Rebuild, Upgrade and Boot..."
 nixos-rebuild --upgrade-all boot 1> /dev/null
 echo "Done"
+
+echo "Setting up flatpak"
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub dev.lizardbyte.app.Sunshine
+flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
+flatpak install flathub com.valvesoftware.Steam
+flatpak install flathub com.valvesoftware.SteamLink
+flatpak install flathub com.discordapp.Discord
+flatpak install flathub org.signal.Signal
+flatpak install flathub org.gnome.Boxes
+flatpak install flathub org.videolan.VLC
+flatpak install flathub org.kde.kwrite
+flatpak install flathub tv.plex.PlexHTPC
+flatpak install flathub com.plexamp.Plexamp
+flatpak install flathub com.github.iwalton3.jellyfin-media-player
+flatpak install flathub org.mozilla.Thunderbird
+flatpak install flathub org.mozilla.firefox
+flatpak install flathub com.github.Eloston.UngoogledChromium
+flatpak install flathub net.mediaarea.MediaInfo
+flatpak install flathub com.bitwarden.desktop
+flatpak install flathub io.otsaloma.nfoview
+flatpak install flathub xyz.z3ntu.razergenie
+flatpak install flathub org.kde.kontact
+flatpak install flathub hu.kramo.Cartridges
+# chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
+
 echo "Reboot system for changes to take affect..."
 echo "Exiting...."
 exit
