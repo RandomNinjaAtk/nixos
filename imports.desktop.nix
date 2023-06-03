@@ -10,7 +10,6 @@
       ./hardware.bluetooth.nix
       ./hardware.razer.nix
       ./enable.printing.nix
-      ./services.sunshine.nix
       ./services.openrgb.nix
       ./services.cockpit.nix
       ./networking.nix
