@@ -94,7 +94,12 @@ flatpak -y install flathub \
   org.raspberrypi.rpi-imager \
   com.nextcloud.desktopclient.nextcloud \
   org.kde.kcalc \
-  us.zoom.Zoom
+  us.zoom.Zoom \
+  com.moonlight_stream.Moonlight \
+  com.heroicgameslauncher.hgl \
+  com.github.tchx84.Flatseal \
+  com.usebottles.bottles \
+  com.github.dawidd6.checksumo
 flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
 
