@@ -7,11 +7,9 @@
   services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
   
   # programs
-  programs.steam = {
-    enable = true;
-    #remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    #dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  }; # steam
+  
+  # hardware
+  hardware.steam-hardware.enable = true;
 
   # packages
   environment.systemPackages = with pkgs; [
