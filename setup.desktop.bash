@@ -70,7 +70,6 @@ echo "Done"
 
 echo "Setting up flatpak"
 flatpak -y remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak -y override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 flatpak -y install flathub \
   dev.lizardbyte.app.Sunshine \
   com.valvesoftware.Steam \
@@ -94,8 +93,9 @@ flatpak -y install flathub \
   hu.kramo.Cartridges \
   org.raspberrypi.rpi-imager \
   com.nextcloud.desktopclient.nextcloud \
-  org.kde.kcalc
-flatpak -y override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
+  org.kde.kcalc \
+  us.zoom.Zoom
+flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
 
 echo "Reboot system for changes to take affect..."
