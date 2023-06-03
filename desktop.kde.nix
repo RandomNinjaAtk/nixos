@@ -20,7 +20,7 @@
 
   # packages
   environment.systemPackages = with pkgs; [
-    kate
+    # kate
   ];
   
   # other
