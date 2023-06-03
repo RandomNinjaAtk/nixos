@@ -91,7 +91,10 @@ flatpak -y install flathub \
   io.otsaloma.nfoview \
   xyz.z3ntu.razergenie \
   org.kde.kontact \
-  hu.kramo.Cartridges
+  hu.kramo.Cartridges \
+  org.raspberrypi.rpi-imager \
+  com.nextcloud.desktopclient.nextcloud \
+  org.kde.kcalc
 flatpak -y override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
 
