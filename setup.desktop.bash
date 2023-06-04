@@ -69,7 +69,7 @@ nixos-rebuild --upgrade-all boot 1> /dev/null
 echo "Done"
 
 echo "Setting up flatpak"
-flatpak -y remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak -y install flathub \
   dev.lizardbyte.app.Sunshine \
   com.valvesoftware.Steam \
@@ -99,7 +99,9 @@ flatpak -y install flathub \
   com.heroicgameslauncher.hgl \
   com.github.tchx84.Flatseal \
   com.usebottles.bottles \
-  com.github.dawidd6.checksumo
+  com.github.dawidd6.checksumo \
+  com.ktechpit.wonderwall \
+  com.hunterwittenborn.Celeste
 flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
 
