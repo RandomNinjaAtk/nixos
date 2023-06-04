@@ -102,7 +102,12 @@ flatpak -y install flathub \
   com.github.dawidd6.checksumo \
   com.ktechpit.wonderwall \
   com.hunterwittenborn.Celeste \
-  org.kde.filelight
+  org.kde.filelight \
+  io.github.jonmagon.kdiskmark \
+  sh.cider.Cider \
+  org.musicbrainz.Picard \
+  org.gnome.Firmware
+
 flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
 
