@@ -108,7 +108,9 @@ flatpak -y install flathub \
   org.musicbrainz.Picard \
   org.gnome.Firmware \
   org.qownnotes.QOwnNotes \
-  org.gnome.gitlab.cheywood.Iotas
+  org.gnome.gitlab.cheywood.Iotas \
+  io.github.martinrotter.rssguard \
+  net.rpdev.OpenTodoList
 
 flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
