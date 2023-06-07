@@ -115,6 +115,9 @@ flatpak -y install flathub \
 flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 # chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | tee /etc/udev/rules.d/85-sunshine-input.rules
 
+# Update flatpaks
+flatpak update
+
 echo "Reboot system for changes to take affect..."
 echo "Exiting...."
 exit
