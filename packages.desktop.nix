@@ -26,3 +26,9 @@
     gpu-viewer
   ];
 }
+
+# clinfo
+# eglinfo
+# glxinfo
+# vulkaninfo
+# wayland-info
