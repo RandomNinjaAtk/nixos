@@ -22,5 +22,7 @@
     appimage-run
     vmware-horizon-client
     rustdesk
+    wayland-info
+    gpu-viewer
   ];
 }
