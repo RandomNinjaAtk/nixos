@@ -99,8 +99,6 @@ flatpak -y install flathub \
   com.heroicgameslauncher.hgl \
   com.github.tchx84.Flatseal \
   com.usebottles.bottles \
-  com.github.dawidd6.checksumo \
-  com.ktechpit.wonderwall \
   com.hunterwittenborn.Celeste \
   org.kde.filelight \
   io.github.jonmagon.kdiskmark \
