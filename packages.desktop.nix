@@ -24,6 +24,9 @@
     rustdesk
     wayland-utils
     gpu-viewer
+    clinfo
+    glxinfo
+    vulkan-tools
   ];
 }
 
