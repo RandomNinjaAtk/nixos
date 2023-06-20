@@ -1,46 +1,49 @@
-{pkgs, ...}: {
+{ config, lib, pkgs, ... }:
 
-  # install dependencies
-  environment.systemPackages = with pkgs; [ sunshine ];
-  hardware.uinput.enable = true; # enable uinput  
-  services.udev.enable = true;
- 
-  services.udev.extraRules = ''
-    # Your rule goes here
-    KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
-  '';
+with lib;
 
-  security.wrappers = {
-    sunshine = {
-      source = "${pkgs.sunshine}/bin/sunshine";
-      capabilities = "cap_sys_admin+ep";
+let
+
+  cfg = config.services.sunshine;
+
+in
+
+{
+  options = {
+
+    services.sunshine = {
+      enable = mkEnableOption (mdDoc "Sunshine");
+    };
+
+  };
+
+  config = mkIf config.services.sunshine.enable {
+
+    environment.systemPackages = [
+      pkgs.sunshine
+    ];
+
+    security.wrappers.sunshine = {
       owner = "root";
       group = "root";
-    };
-  }; 
-
-
-  systemd.user.services.sunshine = {
-    script = "/run/current-system/sw/bin/env /run/wrappers/bin/sunshine";
-
-    unitConfig = {
-      Description = "Sunshine is a Game stream host for Moonlight.";
-      StartLimitIntervalSec = 500;
-      StartLimitBurst = 5;
+      capabilities = "cap_sys_admin+p";
+      source = "${pkgs.sunshine}/bin/sunshine";
     };
 
-    serviceConfig = {
-      Environment = "WAYLAND_DISPLAY=wayland-0";
-      # auto restart
-      Restart = "on-failure";
-      RestartSec = "5s";
-    };
-    wantedBy = [ 
-      "graphical-session.target"
-    ];
+    systemd.user.services.sunshine =
+      {
+        description = "sunshine";
+        wantedBy = [ "graphical-session.target" ];
+        serviceConfig = {
+          ExecStart = "${config.security.wrapperDir}/sunshine";
+        };
+      };
+
   };
 }
 
+# Enable using:
+# services.sunshine.enable = true;
 # Get Service Status
 # systemctl --user status sunshine
 # get logs
