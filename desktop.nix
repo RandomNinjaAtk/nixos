@@ -23,6 +23,7 @@
     openrgb-with-all-plugins
     razergenie
     moonlight-qt
+    vmware-horizon-client
   ];
 
   hardware.bluetooth.enable = true;
