@@ -6,7 +6,13 @@
 
 cd /etc/nixos
 
+# services
+echo "Getting Services configurations"
+curl -s https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/services.sunshine.nix -O
+echo "Done"
+
 # get config
+echo "Getting main configurations"
 curl -s https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/desktop.nix -O
 echo "Done"
 
