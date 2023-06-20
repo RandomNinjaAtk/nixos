@@ -33,6 +33,7 @@
   services.sunshine.enable = true;
   services.tailscale.enable = true;
   networking.firewall.enable = false;
+  services.avahi.publish.userServices = true;
 
   programs.steam = {
     enable = true;
