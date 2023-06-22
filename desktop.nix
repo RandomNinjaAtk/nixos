@@ -6,6 +6,7 @@
       ./services.sunshine.nix
     ];
 
+  # Update to the latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
     
   # Allow unfree packages
