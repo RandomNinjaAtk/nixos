@@ -5,6 +5,8 @@
     [
       ./services.sunshine.nix
     ];
+
+  boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
     
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
