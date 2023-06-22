@@ -4,6 +4,7 @@
   imports =
     [
       ./services.sunshine.nix
+      ./home-manager.nix
     ];
 
   # Update to the latest kernel
