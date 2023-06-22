@@ -25,6 +25,9 @@
   hardware.bluetooth.enable = true;
   hardware.openrazer.enable = true;
   
+  # networking
+  networking.firewall.enable = false;
+  
   # services
   services.openssh.enable = true;
   services.sunshine.enable = true;
@@ -48,4 +51,5 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
+ 
 }
