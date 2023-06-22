@@ -30,6 +30,12 @@ in
       source = "${pkgs.sunshine}/bin/sunshine";
     };
 
+    # Requires to simulate input
+    boot.kernelModules = [ "uinput" ];
+    services.udev.extraRules = ''
+      KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
+    '';
+
     systemd.user.services.sunshine =
       {
         description = "sunshine";
