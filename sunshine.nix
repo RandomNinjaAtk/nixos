@@ -42,7 +42,7 @@ in
       serviceConfig = {
         Restart = "on-failure";
         RestartSec = "5s";
-        ExecStart = "${pkgs.sunshine}/bin/sunshine";
+        ExecStart = "${config.security.wrapperDir}/sunshine";
       };
     };
   };
