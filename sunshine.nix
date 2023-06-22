@@ -27,6 +27,11 @@ in
     services.udev.extraRules = ''
       KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
     '';
+
+    security.wrappers.sunshine = {
+      capabilities = "cap_sys_admin+p";
+      source = "${pkgs.sunshine}/bin/sunshine";
+    };
     
     systemd.user.services.sunshine = {
       description = "Sunshine self-hosted game stream host for Moonlight.";
