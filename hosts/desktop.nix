@@ -25,10 +25,13 @@
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock 
 
   # services
-  services.openssh.enable = true;
-  services.hardware.openrgb.enable = true;
-  services.sunshine.enable = true;
-  services.tailscale.enable = true;
+  services.openssh.enable = true; # ssh
+  services.hardware.openrgb.enable = true; # openrgb
+  services.sunshine.enable = true; # custom sunshine module
+  services.tailscale.enable = true; # tailscale
+  services.fprintd.enable = true; # finger print reader
+  services.flatpak.enable = true; # flatpak
+  services.fwupd.enable = true; # firmware updates
 
   # Avahi
   services.avahi = {
