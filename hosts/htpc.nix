@@ -46,6 +46,22 @@
     };
   };
 
+  # Packages
+  environment.systemPackages = with pkgs; [
+    curl
+    wget
+    htop
+    ungoogled-chromium
+    firefox
+    openrgb-with-all-plugins
+    razergenie
+    moonlight-qt
+    plexamp
+    plex-media-player
+    jellyfin-media-player
+    kodi-wayland
+  ];
+
   # steam
   programs.steam = {
     enable = true;
