@@ -56,7 +56,6 @@
     openrgb-with-all-plugins
     razergenie
     moonlight-qt
-    plexamp
     plex-media-player
     jellyfin-media-player
     kodi-wayland
