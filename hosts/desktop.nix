@@ -63,6 +63,10 @@
     vmware-horizon-client
     libsForQt5.kontact
     libsForQt5.discover
+    plexamp
+    plex-media-player
+    jellyfin-media-player
+    kodi-wayland
   ];
 
   programs.steam = {
