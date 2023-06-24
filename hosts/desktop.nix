@@ -61,6 +61,8 @@
     razergenie
     moonlight-qt
     vmware-horizon-client
+    libsForQt5.kontact
+    libsForQt5.discover
   ];
 
   programs.steam = {
