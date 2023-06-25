@@ -22,7 +22,7 @@
   # desktop environment
   # Enable Wayland Default
   services.xserver.displayManager.defaultSession = "plasmawayland"; # plasma or plasmawayland or plasma-bigscreen-wayland
-  services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock 
+  services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
 
   # services
   services.openssh.enable = true; # ssh
@@ -32,6 +32,11 @@
   services.fprintd.enable = true; # finger print reader
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
+
+  # Remote services
+  services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "startplasma-x11";
+  services.xrdp.openFirewall = true;
 
   # Avahi
   services.avahi = {
