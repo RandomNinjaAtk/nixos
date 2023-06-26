@@ -3,6 +3,7 @@
   imports =
     [
       ./services.sunshine.nix
+      ./services.steam.nix
     ];
   
   # Update to the latest kernel
@@ -58,14 +59,6 @@
     moonlight-qt
     plex-media-player
     jellyfin-media-player
-    kodi-wayland
-  ];
-
-  # steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
- 
+    kodi
+  ]; 
 }
