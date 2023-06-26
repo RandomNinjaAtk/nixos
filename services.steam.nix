@@ -16,7 +16,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "s";
-      ExecStart = "${pkgs.util-linux}/bin/setsid ${pkgs.steam}/bin/steam steam://open/bigpicture"";
+      ExecStart = "${pkgs.util-linux}/bin/setsid ${pkgs.steam}/bin/steam steam://open/bigpicture";
     };
   };
 }
