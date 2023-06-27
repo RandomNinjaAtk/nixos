@@ -5,7 +5,7 @@ with lib;
 let
 
   cfg = config.services.sunshine;
-
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 in
 
 {
@@ -19,8 +19,8 @@ in
 
   config = mkIf config.services.sunshine.enable {
 
-    environment.systemPackages = [
-      pkgs.sunshine
+    environment.systemPackages = with pkgs; [
+      unstable.sunshine
     ];
 
     security.wrappers.sunshine = {
