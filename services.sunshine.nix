@@ -5,7 +5,9 @@ with lib;
 let
 
   cfg = config.services.sunshine;
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstableTarball =
+    fetchTarball
+      https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz;
 in
 
 {
@@ -19,6 +21,13 @@ in
 
   config = mkIf config.services.sunshine.enable {
 
+    nixpkgs.config = {
+      packageOverrides = pkgs: with pkgs; {
+        unstable = import unstableTarball {
+          config = config.nixpkgs.config;
+        };
+      };
+    };
     environment.systemPackages = with pkgs; [
       unstable.sunshine
     ];
