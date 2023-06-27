@@ -11,6 +11,11 @@
     
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # auto update and change to unstable
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-unstable/";
     
   # desktop environment
   # Enable Wayland Default
