@@ -34,6 +34,13 @@
   services.fwupd.enable = true; # firmware updates
   services.printing.enable = true; # enable printing
 
+  # Print Services
+  services.printing.enable = true; # enable printing
+  services.printing.drivers = [ 
+    pkgs.cnijfilter2 # G6000 Series Print Driver
+  ];
+
+
   # Remote services
   services.xrdp.enable = true;
   services.xrdp.defaultWindowManager = "startplasma-x11";
@@ -74,7 +81,6 @@
     plex-media-player
     jellyfin-media-player
     kodi-wayland
-    # canon-cups-ufr2 # Printer DRiver
   ];
 
   programs.steam = {
