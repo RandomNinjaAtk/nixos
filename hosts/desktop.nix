@@ -32,6 +32,7 @@
   services.fprintd.enable = true; # finger print reader
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
+  services.printing.enable = true; # enable printing
 
   # Remote services
   services.xrdp.enable = true;
@@ -43,6 +44,7 @@
     enable = true;
     reflector = true;
     nssmdns = true;
+    openFirewall = true;
     publish = {
       enable = true;
       addresses = true;
@@ -72,6 +74,7 @@
     plex-media-player
     jellyfin-media-player
     kodi-wayland
+    # canon-cups-ufr2 # Printer DRiver
   ];
 
   programs.steam = {
