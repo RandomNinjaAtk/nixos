@@ -80,6 +80,7 @@
     plex-media-player
     jellyfin-media-player
     kodi-wayland
+    element-desktop
   ];
 
   programs.steam = {
