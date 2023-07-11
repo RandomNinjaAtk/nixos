@@ -15,7 +15,7 @@
     wantedBy = [ "graphical-session.target" ];
     serviceConfig = {
       Restart = "always";
-      RestartSec = "s";
+      RestartSec = "5s";
       ExecStart = "${pkgs.util-linux}/bin/setsid ${pkgs.steam}/bin/steam steam://open/bigpicture";
     };
   };
