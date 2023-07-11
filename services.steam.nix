@@ -16,10 +16,11 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5s";
-      ExecStart = "${pkgs.util-linux}/bin/setsid ${pkgs.steam}/bin/steam steam://open/bigpicture";
+      ExecStart = "${pkgs.steam}/bin/steam steam://open/bigpicture -no-cef-sandbox";
     };
   };
 }
 
 # Get Service Status
 # systemctl --user restart steam.service
+
