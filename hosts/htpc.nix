@@ -19,7 +19,7 @@
     
   # desktop environment
   # Enable Wayland Default
-  services.xserver.displayManager.defaultSession = "plasma"; #plasmawayland or plasma-bigscreen-wayland
+  services.xserver.displayManager.defaultSession = "plasmawayland"; #plasmawayland or plasma-bigscreen-wayland
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock 
 
   # Enable AutoLogin
@@ -44,6 +44,7 @@
     enable = true;
     reflector = true;
     nssmdns = true;
+    openFirewall = true;
     publish = {
       enable = true;
       addresses = true;
