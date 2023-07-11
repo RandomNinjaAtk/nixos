@@ -23,4 +23,3 @@
 
 # Get Service Status
 # systemctl --user restart steam.service
-
