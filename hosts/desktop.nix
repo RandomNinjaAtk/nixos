@@ -81,6 +81,7 @@
     jellyfin-media-player
     kodi-wayland
     element-desktop
+    vlc
   ];
 
   programs.steam = {
