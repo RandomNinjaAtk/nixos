@@ -82,6 +82,7 @@
     kodi-wayland
     element-desktop
     vlc
+    rustdesk
   ];
 
   programs.steam = {
