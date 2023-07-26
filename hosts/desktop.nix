@@ -67,7 +67,7 @@
     signal-desktop
     discord
     rpi-imager
-    ungoogled-chromium
+    chromium
     firefox
     thunderbird
     openrgb-with-all-plugins
