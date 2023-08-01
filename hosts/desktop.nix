@@ -69,7 +69,7 @@
     htop
     signal-desktop
     discord
-    etcher
+    rpi-imager
     chromium
     firefox
     thunderbird
