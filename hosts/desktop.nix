@@ -24,6 +24,9 @@
   services.xserver.displayManager.defaultSession = "plasmawayland"; # plasma or plasmawayland or plasma-bigscreen-wayland
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
 
+  # KDE specifics
+  programs.partition-manager.enable = true; # kde partitioning tool
+
   # services
   services.openssh.enable = true; # ssh
   services.hardware.openrgb.enable = true; # openrgb
@@ -66,7 +69,7 @@
     htop
     signal-desktop
     discord
-    rpi-imager
+    etcher
     chromium
     firefox
     thunderbird
