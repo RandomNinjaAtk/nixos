@@ -89,7 +89,7 @@
     vlc
     rustdesk
     kdiskmark
-    gnome-boxes
+    gnome.gnome-boxes
   ];
 
   programs.steam = {
