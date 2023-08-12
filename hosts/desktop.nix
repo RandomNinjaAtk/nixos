@@ -4,6 +4,7 @@
   imports =
     [
       ./services.sunshine.nix
+      ./samba.nix
     ];
 
   # Update to the latest kernel
