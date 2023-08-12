@@ -9,6 +9,7 @@
 
   # Update to the latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
+  boot.supportedFilesystems = [ "ntfs" ];
     
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
