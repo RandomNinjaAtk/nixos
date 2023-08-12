@@ -12,7 +12,7 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/samba.nix -O
 4. Reboot system
 
 
-## htpc Setup:
+## HTPC Setup:
 
 1. Run the following commands:
 ```
