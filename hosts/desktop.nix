@@ -88,6 +88,7 @@
     element-desktop
     vlc
     rustdesk
+    kdiskmark
   ];
 
   programs.steam = {
