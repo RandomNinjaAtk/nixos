@@ -1,6 +1,6 @@
 ## Desktop Setup:
 
-1. Run the following commands:
+1. Run the following commands as root user:
 ```
 cd /etc/nixos \
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hosts/desktop.nix -O \
@@ -14,7 +14,7 @@ curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/samba.nix -O
 
 ## HTPC Setup:
 
-1. Run the following commands:
+1. Run the following commands as root user:
 ```
 cd /etc/nixos \
 curl https://raw.githubusercontent.com/RandomNinjaAtk/nixos/main/hosts/htpc.nix -O \
