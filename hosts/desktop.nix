@@ -90,6 +90,7 @@
     rustdesk
     kdiskmark
     gnome.gnome-boxes
+    distrobox
   ];
 
   programs.steam = {
