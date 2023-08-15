@@ -17,6 +17,11 @@
   # hardware
   hardware.bluetooth.enable = true;
   hardware.openrazer.enable = true;
+  hardware.xone.enable = true;
+  hardware.xpadneo.enable = true;
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.steam-hardware.enable = true;
 
   # networking
   networking.firewall.enable = false;
@@ -25,6 +30,7 @@
   # Enable Wayland Default
   services.xserver.displayManager.defaultSession = "plasmawayland"; # plasma or plasmawayland or plasma-bigscreen-wayland
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
+  services.xserver.displayManager.sddm.enableHidpi = true; # enable automatic HiDPI mode
 
   # KDE specifics
   programs.partition-manager.enable = true; # kde partitioning tool
