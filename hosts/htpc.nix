@@ -11,11 +11,6 @@
     
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  # auto update and change to unstable
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
-  system.autoUpgrade.channel = "https://nixos.org/channels/nixos-unstable";
     
   # desktop environment
   # Enable Wayland Default
@@ -31,7 +26,12 @@
   # hardware
   hardware.bluetooth.enable = true;
   hardware.openrazer.enable = true;
-  
+  hardware.xone.enable = true;
+  hardware.xpadneo.enable = true;
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.steam-hardware.enable = true;
+
   # networking
   networking.firewall.enable = false;
   
