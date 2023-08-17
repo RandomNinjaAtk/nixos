@@ -6,12 +6,15 @@
 
   # boot options/configurations
   boot.supportedFilesystems = [ "ntfs" ];
+  boot.hardwareScan = true;
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # gnome
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.gnome.gnome-remote-desktop.enable = true;
 
   # hardware
   hardware.bluetooth.enable = true;
@@ -20,6 +23,7 @@
   hardware.steam-hardware.enable = true;
   hardware.xone.enable = true;
   hardware.xpadneo.enable = true;
+  hardware.openrazer.enable = true;
 
   # networking
   networking.firewall.enable = false;
