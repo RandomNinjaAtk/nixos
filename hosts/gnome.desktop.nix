@@ -70,7 +70,7 @@
 
     # steam controller support for flatpak
     # Various controller udev rules stolen from https://gitlab.com/fabiscafe/game-devices-udev and here (https://github.com/pmarreck/nix_machine_configs/blob/yolo/system76_thelio_nixos/configuration.nix)
-    udev.extraRules = ''
+    services.udev.extraRules = ''
       # 8Bitdo F30 P1
       SUBSYSTEM=="input", ATTRS{name}=="8Bitdo FC30 GamePad", ENV{ID_INPUT_JOYSTICK}="1", TAG+="uaccess"
       # 8Bitdo F30 P2
