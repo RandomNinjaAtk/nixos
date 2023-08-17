@@ -15,6 +15,24 @@
   # gnome
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   services.gnome.gnome-remote-desktop.enable = true;
+  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+	  [org.gnome.desktop.interface]
+	  gtk-theme='Dracula'
+
+    [org.gnome.desktop.wm.preferences]
+    button-layout=':minimize,maximize,close'
+    resize-with-right-button=true
+    theme='Dracula'
+
+    [org.gnome.desktop.interface.icon-theme]
+    theme='Dracula;
+
+    [org.gnome.SessionManager]
+    auto-save-session=true
+
+    [org.gtk.Settings.FileChooser]
+    sort-directories-first=true
+  '';
 
   # hardware
   hardware.bluetooth.enable = true;
@@ -69,6 +87,8 @@
     gnomeExtensions.forge
     gnomeExtensions.wireless-hid
     gnomeExtensions.simple-system-monitor
+    dracula-theme
+    dracula-icon-theme
   ];
 
     # steam controller support for flatpak
