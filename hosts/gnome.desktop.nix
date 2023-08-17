@@ -19,6 +19,7 @@
   # gnome
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   services.gnome.gnome-remote-desktop.enable = true;
+  services.xserver.displayManager.gdm.wayland = true; # Allow GDM to run on Wayland instead of Xserver
   services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
     [org.gnome.desktop.interface]
     gtk-theme='Dracula'
