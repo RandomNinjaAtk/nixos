@@ -6,7 +6,7 @@ flatpak -y install flathub \
   com.valvesoftware.Steam \
   com.valvesoftware.SteamLink \
   com.valvesoftware.Steam.CompatibilityTool.Boxtron \
-  com.valvesoftware.Steam.Utility.protontricks \
+  com.github.Matoking.protontricks \
   #org.freedesktop.Platform.VulkanLayer.MangoHud \
   org.freedesktop.Platform.VulkanLayer.vkBasalt \
   com.valvesoftware.Steam.Utility.gamescope \
