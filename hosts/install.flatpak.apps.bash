@@ -5,6 +5,11 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak -y install flathub \
   com.valvesoftware.Steam \
   com.valvesoftware.SteamLink \
+  com.valvesoftware.Steam.CompatibilityTool.Boxtron \
+  com.valvesoftware.Steam.Utility.protontricks \
+  org.freedesktop.Platform.VulkanLayer.MangoHud \
+  org.freedesktop.Platform.VulkanLayer.vkBasalt \
+  com.valvesoftware.Steam.Utility.gamescope \
   com.discordapp.Discord \
   org.signal.Signal \
   org.videolan.VLC \
