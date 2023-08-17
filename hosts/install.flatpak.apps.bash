@@ -7,7 +7,7 @@ flatpak -y install flathub \
   com.valvesoftware.SteamLink \
   com.valvesoftware.Steam.CompatibilityTool.Boxtron \
   com.github.Matoking.protontricks \
-  org.freedesktop.Platform.VulkanLayer.vkBasalt \
+  org.freedesktop.Platform.VulkanLayer.vkBasalt/stable \
   com.valvesoftware.Steam.Utility.gamescope \
   com.discordapp.Discord \
   org.signal.Signal \
@@ -29,7 +29,7 @@ flatpak -y install flathub \
   com.github.tchx84.Flatseal \
   com.usebottles.bottles \
   org.musicbrainz.Picard \
-  org.gnome.Firmware -y
+  org.gnome.Firmware
 
 # Update flatpaks
 flatpak update -y
