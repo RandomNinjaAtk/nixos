@@ -74,6 +74,10 @@
       workstation = true;
     };
   };
+
+  # programs
+  programs.gamemode.enable = true; # for steam
+  programs.dconf.enable = true;
   
   # Remove packages
   services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
