@@ -67,6 +67,8 @@
     gnomeExtensions.dash-to-panel
     gnomeExtensions.arcmenu
     gnomeExtensions.forge
+    gnomeExtensions.wireless-hid
+    gnomeExtensions.simple-system-monitor
   ];
 
     # steam controller support for flatpak
