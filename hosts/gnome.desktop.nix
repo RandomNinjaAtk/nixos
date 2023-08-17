@@ -93,9 +93,9 @@
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
     gnomeExtensions.arcmenu
-    gnomeExtensions.forge
     gnomeExtensions.wireless-hid
     gnomeExtensions.simple-system-monitor
+    gnomeExtensions.tiling-assistant
     dracula-theme
     dracula-icon-theme
   ];
