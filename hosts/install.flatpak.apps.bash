@@ -7,7 +7,7 @@ flatpak -y install flathub \
   com.valvesoftware.SteamLink \
   com.valvesoftware.Steam.CompatibilityTool.Boxtron \
   com.github.Matoking.protontricks \
-  org.freedesktop.Platform.VulkanLayer.vkBasalt/stable \
+  org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/stable \
   com.valvesoftware.Steam.Utility.gamescope \
   com.discordapp.Discord \
   org.signal.Signal \
