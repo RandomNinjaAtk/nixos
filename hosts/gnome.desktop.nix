@@ -241,6 +241,5 @@
       # Unknown-Brand Xbox Controller; USB
       KERNEL=="hidraw*", ATTRS{idVendor}=="0c12", ATTRS{idProduct}=="8810", MODE="0660", TAG+="uaccess"
     '';
-  };
 
 }
