@@ -66,6 +66,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
     gnomeExtensions.arcmenu
+    gnomeExtensions.forge
   ];
 
     # steam controller support for flatpak
