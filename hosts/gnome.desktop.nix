@@ -25,7 +25,7 @@
     theme='Dracula'
 
     [org.gnome.desktop.interface.icon-theme]
-    theme='Dracula;
+    theme='Dracula'
 
     [org.gnome.SessionManager]
     auto-save-session=true
