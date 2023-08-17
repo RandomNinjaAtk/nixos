@@ -4,10 +4,14 @@
      #./samba.nix
   ];
 
+  # set internationalisation properties.
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+  };
+
   # boot options/configurations
   boot.supportedFilesystems = [ "ntfs" ];
   boot.hardwareScan = true;
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -16,8 +20,8 @@
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   services.gnome.gnome-remote-desktop.enable = true;
   services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
-	  [org.gnome.desktop.interface]
-	  gtk-theme='Dracula'
+    [org.gnome.desktop.interface]
+    gtk-theme='Dracula'
 
     [org.gnome.desktop.wm.preferences]
     button-layout=':minimize,maximize,close'
