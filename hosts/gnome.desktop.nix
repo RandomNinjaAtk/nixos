@@ -98,7 +98,17 @@
     gnomeExtensions.simple-system-monitor
     gnomeExtensions.tiling-assistant
     dracula-theme
-    dracula-icon-theme
+    dracula-icon-theme # GTK THEME
+    nordic # GTK/KDE theme
+    theme-vertex # GTK theme
+    deepin.deepin-gtk-theme
+    pop-gtk-theme
+    fluent-gtk-theme
+    catppuccin-gtk
+    layan-gtk-theme
+    arc-theme
+    canta-theme
+    sierra-gtk-themev
   ];
 
     # steam controller support for flatpak
