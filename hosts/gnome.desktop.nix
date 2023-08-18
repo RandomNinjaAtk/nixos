@@ -12,7 +12,6 @@
   # boot options/configurations
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   boot.supportedFilesystems = [ "ntfs" ];
-  boot.hardwareScan = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -44,8 +43,6 @@
   hardware.bluetooth.enable = true;
   hardware.opengl.enable = true;
   hardware.opengl.driSupport32Bit = true;
-  hardware.steam-hardware.enable = true;
-  hardware.openrazer.enable = true;
 
   # networking
   networking.firewall.enable = false;
