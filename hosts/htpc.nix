@@ -51,15 +51,6 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
-    cheese # webcam tool
-    gnome-music
-    geary # email reader
-    evince # document viewer
-    totem # video player
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
   ]) ++ (with pkgs.gnome; [
     gnome-terminal
     gedit # text editor
