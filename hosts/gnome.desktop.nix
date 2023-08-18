@@ -90,6 +90,7 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
+    # EXTENSIONS
     gnome.gnome-tweaks
     gnomeExtensions.appindicator
     gnomeExtensions.dash-to-panel
@@ -97,10 +98,11 @@
     gnomeExtensions.wireless-hid
     gnomeExtensions.simple-system-monitor
     gnomeExtensions.tiling-assistant
+    # THEMES
     dracula-theme
-    dracula-icon-theme # GTK THEME
-    nordic # GTK/KDE theme
-    theme-vertex # GTK theme
+    dracula-icon-theme
+    nordic
+    theme-vertex
     deepin.deepin-gtk-theme
     pop-gtk-theme
     fluent-gtk-theme
@@ -108,7 +110,7 @@
     layan-gtk-theme
     arc-theme
     canta-theme
-    sierra-gtk-themev
+    sierra-gtk-theme
   ];
 
   programs.steam = {
