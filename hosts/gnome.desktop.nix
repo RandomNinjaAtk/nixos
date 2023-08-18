@@ -10,6 +10,7 @@
   };
 
   # boot options/configurations
+  boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   boot.supportedFilesystems = [ "ntfs" ];
   boot.hardwareScan = true;
 
