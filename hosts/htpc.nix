@@ -1,4 +1,4 @@
- config, pkgs, ... }: {
+{ config, pkgs, ... }: {
   imports = [
      ./services.sunshine.nix
      ./services.steam.nix
@@ -115,11 +115,9 @@
     # PACKAGES
     openrgb-with-all-plugins
     firefox
+    moonlight-qt
+    plex-media-player
+    jellyfin-media-player
+    kodi
   ];
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
 }
