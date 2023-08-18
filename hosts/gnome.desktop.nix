@@ -97,6 +97,7 @@
     # THEMES
     dracula-theme
     dracula-icon-theme
+    gnome.adwaita-icon-theme
     nordic
     # PACKAGES
     openrgb-with-all-plugins
