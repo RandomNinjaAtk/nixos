@@ -45,8 +45,6 @@
   hardware.opengl.enable = true;
   hardware.opengl.driSupport32Bit = true;
   hardware.steam-hardware.enable = true;
-  hardware.xone.enable = true;
-  hardware.xpadneo.enable = true;
   hardware.openrazer.enable = true;
 
   # networking
