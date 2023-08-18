@@ -119,6 +119,6 @@
   ];
 
   # STEAM 
-  programs.steam.gamescopeSession.enable = false; # Whether to enable GameScope Session.
-  programs.steam.gamescopeSession = true; # Run a GameScope driven Steam session from your display-manager
+  #programs.steam.gamescopeSession.enable = false; # Whether to enable GameScope Session.
+  #programs.steam.gamescopeSession = true; # Run a GameScope driven Steam session from your display-manager
 }
