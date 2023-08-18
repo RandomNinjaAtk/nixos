@@ -97,15 +97,8 @@
     dracula-theme
     dracula-icon-theme
     nordic
-    theme-vertex
-    deepin.deepin-gtk-theme
-    pop-gtk-theme
-    fluent-gtk-theme
-    catppuccin-gtk
-    layan-gtk-theme
-    arc-theme
-    canta-theme
-    sierra-gtk-theme
+    # PACKAGES
+    openrgb-with-all-plugins
   ];
 
   programs.steam = {
