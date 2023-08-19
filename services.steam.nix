@@ -18,7 +18,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5s";
-      ExecStart = "${pkgs.steam}/bin/steam steam://open/bigpicture -no-cef-sandbox";
+      ExecStart = "${pkgs.gamescope}/bin/gamescope -w 1920 -h 1080 -f ${pkgs.steam}/bin/steam -gamepadui -no-cef-sandbox";
     };
   };
 }
