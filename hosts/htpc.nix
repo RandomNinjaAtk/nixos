@@ -23,12 +23,12 @@
   systemd.services."getty@tty1".enable = false; # autologin workaround (https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229)
   systemd.services."autovt@tty1".enable = false; # autologin workaround (https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229)
 
+  # session
+  services.xserver.displayManager.defaultSession = "gnome-xorg"; # default sessoin (gnome-xorg or gnome or steam)
+
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
-  services.gnome.gnome-remote-desktop.enable = true;
-  services.xserver.displayManager.gdm.wayland = true; # Allow GDM to run on Wayland instead of Xserver
   services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
     [org.gnome.desktop.interface]
     gtk-theme='Dracula'
