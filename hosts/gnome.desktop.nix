@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
      ./services.sunshine.nix
-     #./samba.nix
+     ./samba.nix
   ];
 
   # set internationalisation properties.
