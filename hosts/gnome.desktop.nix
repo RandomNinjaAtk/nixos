@@ -16,6 +16,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # session
+  services.xserver.displayManager.defaultSession = "gnome"; # default sessoin (gnome or steam)
+
   # gnome
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   services.gnome.gnome-remote-desktop.enable = true;
@@ -38,6 +41,16 @@
     [org.gtk.Settings.FileChooser]
     sort-directories-first=true
   '';
+
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    gnome-terminal
+    gedit # text editor
+    epiphany # web browser
+    gnome-characters
+  ]);
 
   # hardware
   hardware.bluetooth.enable = true;
@@ -94,19 +107,24 @@
     gnomeExtensions.wireless-hid
     gnomeExtensions.simple-system-monitor
     gnomeExtensions.tiling-assistant
+    gnomeExtensions.no-overview
     # THEMES
     dracula-theme
     dracula-icon-theme
-    gnome.adwaita-icon-theme
     nordic
+    gnome.adwaita-icon-theme
+    beauty-line-icon-theme
     # PACKAGES
     openrgb-with-all-plugins
+    gamescope
+    mangohud
   ];
 
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    gamescopeSession.enable = false; # Whether to enable GameScope Session.
   };
 
 }
