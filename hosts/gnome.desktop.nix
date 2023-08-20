@@ -124,6 +124,7 @@
     gamescope
     mangohud
     wget
+    usbutils
     # APPLICATIONS
     picard
     moonlight-qt
