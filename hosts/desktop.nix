@@ -16,9 +16,6 @@
   
   # hardware
   hardware.bluetooth.enable = true;
-  hardware.openrazer.enable = true;
-  hardware.xone.enable = true;
-  hardware.xpadneo.enable = true;
   hardware.opengl.enable = true;
   hardware.opengl.driSupport32Bit = true;
   hardware.steam-hardware.enable = true;
@@ -27,8 +24,10 @@
   networking.firewall.enable = false;
   
   # desktop environment
-  # Enable Wayland Default
-  services.xserver.displayManager.defaultSession = "plasmawayland"; # plasma or plasmawayland or plasma-bigscreen-wayland
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.defaultSession = "plasmawayland"; # plasma or plasmawayland or plasma-bigscreen-wayland or steam
+  services.xserver.desktopManager.plasma5.bigscreen.enable = true;
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
   services.xserver.displayManager.sddm.enableHidpi = true; # enable automatic HiDPI mode
 
@@ -82,7 +81,6 @@
     firefox
     thunderbird
     openrgb-with-all-plugins
-    razergenie
     moonlight-qt
     vmware-horizon-client
     libsForQt5.kontact
@@ -95,7 +93,6 @@
     vlc
     rustdesk
     kdiskmark
-    gnome.gnome-boxes
     distrobox
   ];
 
@@ -115,9 +112,12 @@
     };
   };
 
+  # Programs
+  programs.gamescope.enable = true; # install gamescope
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
+    gamescopeSession.enable = true; # Whether to enable GameScope Session.
+  }; # steam
 }
