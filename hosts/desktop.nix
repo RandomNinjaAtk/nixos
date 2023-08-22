@@ -10,6 +10,8 @@
   # Update to the latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   boot.supportedFilesystems = [ "ntfs" ];
+  boot.initrd.kernelModules = ["amdgpu"];
+  services.xserver.videoDrivers = ["amdgpu"];
     
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -22,6 +24,9 @@
 
   # networking
   networking.firewall.enable = false;
+
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
   
   # desktop environment
   services.xserver.displayManager.sddm.enable = true;
@@ -42,6 +47,7 @@
   services.fprintd.enable = true; # finger print reader
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
+  services.locate.enable = true; # enable locate services
 
   # Print Services
   services.printing.enable = true; # enable printing
