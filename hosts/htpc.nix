@@ -72,6 +72,7 @@
   services.sunshine.enable = true; # custom sunshine module
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
+  services.locate.enable = true; # enable locate services
 
   # Avahi
   services.avahi = {
