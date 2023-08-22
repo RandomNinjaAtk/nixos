@@ -29,7 +29,8 @@ flatpak -y install flathub \
   com.github.tchx84.Flatseal \
   com.usebottles.bottles \
   org.musicbrainz.Picard \
-  org.gnome.Firmware
+  org.gnome.Firmware \
+  io.missioncenter.MissionCenter
 
 # Update flatpaks
 flatpak update -y
