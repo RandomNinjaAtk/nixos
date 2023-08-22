@@ -52,7 +52,6 @@
   hardware.bluetooth.enable = true;
   hardware.opengl.enable = true;
   hardware.opengl.driSupport32Bit = true;
-  hardware.openrazer.enable = true;
 
   # networking
   networking.firewall.enable = false;
