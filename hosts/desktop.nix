@@ -88,7 +88,7 @@
     plexamp
     plex-media-player
     jellyfin-media-player
-    kodi-wayland
+    kodi
     element-desktop
     vlc
     rustdesk
