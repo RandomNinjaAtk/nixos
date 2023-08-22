@@ -48,6 +48,7 @@
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
   services.locate.enable = true; # enable locate services
+  programs.kdeconnect.enable = true; # kde connect services
 
   # Print Services
   services.printing.enable = true; # enable printing
