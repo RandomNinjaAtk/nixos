@@ -38,6 +38,7 @@
 
   # KDE specifics
   programs.partition-manager.enable = true; # kde partitioning tool
+  programs.kdeconnect.enable = true; # kde connect services
 
   # services
   services.openssh.enable = true; # ssh
@@ -48,7 +49,6 @@
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
   services.locate.enable = true; # enable locate services
-  programs.kdeconnect.enable = true; # kde connect services
 
   # Print Services
   services.printing.enable = true; # enable printing
@@ -90,8 +90,6 @@
     openrgb-with-all-plugins
     moonlight-qt
     vmware-horizon-client
-    libsForQt5.kontact
-    libsForQt5.discover
     plexamp
     plex-media-player
     jellyfin-media-player
@@ -99,8 +97,12 @@
     element-desktop
     vlc
     rustdesk
-    kdiskmark
     distrobox
+    # KDE
+    libsForQt5.kmail
+    libsForQt5.kontact
+    libsForQt5.discover
+    kdiskmark
   ];
 
   virtualisation = {
