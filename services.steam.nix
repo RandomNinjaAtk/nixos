@@ -21,7 +21,7 @@
     serviceConfig = {
       Restart = "always";
       RestartSec = "5s";
-      ExecStart = "${pkgs.gamescope}/bin/gamescope -w 1920 -h 1080 -e -f ${pkgs.steam}/bin/steam -gamepadui -steamos";
+      ExecStart = "${pkgs.gamescope}/bin/gamescope -w 1920 -h 1080 -e -f -- ${pkgs.steam}/bin/steam -gamepadui -steamos";
     };
   };
 }
