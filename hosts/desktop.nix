@@ -17,6 +17,8 @@
   nixpkgs.config.allowUnfree = true;
   
   # hardware
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.cpu.amd.updateMicrocode = true;
   hardware.bluetooth.enable = true;
   hardware.opengl.enable = true;
   hardware.opengl.driSupport32Bit = true;
