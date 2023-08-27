@@ -96,6 +96,7 @@
     libsForQt5.kmail
     libsForQt5.kontact
     libsForQt5.discover
+    libsForQt5.kate
     kdiskmark
   ];
 
