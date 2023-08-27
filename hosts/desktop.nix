@@ -56,12 +56,6 @@
     pkgs.cnijfilter2 # G6000 Series Print Driver
   ];
 
-
-  # Remote services
-  services.xrdp.enable = true;
-  services.xrdp.defaultWindowManager = "startplasma-x11";
-  services.xrdp.openFirewall = true;
-
   # Avahi
   services.avahi = {
     enable = true;
