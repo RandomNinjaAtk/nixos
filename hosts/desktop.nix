@@ -95,6 +95,15 @@
     rustdesk
     distrobox
     # KDE
+    plasma-overdose-kde-theme # theme
+    materia-kde-theme # theme
+    graphite-kde-theme # theme
+    arc-kde-theme # theme
+    nordic # theme
+    sweet-nova # theme
+    layan-kde # theme
+    qogir-kde # theme
+    catppuccin-kde # theme
     libsForQt5.kdeplasma-addons # addons
     libsForQt5.kmail # mail application
     libsForQt5.kontact # contacts application
