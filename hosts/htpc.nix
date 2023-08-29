@@ -10,53 +10,31 @@
     defaultLocale = "en_US.UTF-8";
   };
 
-  # boot options/configurations
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   boot.supportedFilesystems = [ "ntfs" ];
 
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # desktop environment
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
+
+  # Enable the KDE Plasma Desktop Environment.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.defaultSession = "plasma"; #plasma or plasmawayland or plasma-bigscreen-wayland or steam
+  services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock 
 
   # Enable AutoLogin
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "user";
   systemd.services."getty@tty1".enable = false; # autologin workaround (https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229)
   systemd.services."autovt@tty1".enable = false; # autologin workaround (https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229)
-
-  # session
-  services.xserver.displayManager.defaultSession = "gnome-xorg"; # default sessoin (gnome-xorg or gnome or steam)
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
-    [org.gnome.desktop.interface]
-    gtk-theme='Dracula'
-
-    [org.gnome.desktop.wm.preferences]
-    button-layout=':minimize,maximize,close'
-    resize-with-right-button=true
-    theme='Dracula'
-
-    [org.gnome.desktop.interface.icon-theme]
-    theme='Dracula'
-
-    [org.gnome.SessionManager]
-    auto-save-session=true
-
-    [org.gtk.Settings.FileChooser]
-    sort-directories-first=true
-  '';
-
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-  ]) ++ (with pkgs.gnome; [
-    gnome-terminal
-    gedit # text editor
-    epiphany # web browser
-    gnome-characters
-  ]);
 
   # hardware
   hardware.bluetooth.enable = true;
@@ -90,27 +68,17 @@
 
   # programs
   programs.gamemode.enable = true; # for steam
-  programs.dconf.enable = true;
 
   # Remove packages
   services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
 
   # Packages
   environment.systemPackages = with pkgs; [
-    # THEMES
-    dracula-theme
-    dracula-icon-theme
-    gnome.adwaita-icon-theme
     # PACKAGES
-    openrgb-with-all-plugins
     firefox
     moonlight-qt
     plex-media-player
     jellyfin-media-player
     kodi
   ];
-
-  # STEAM 
-  #programs.steam.gamescopeSession.enable = false; # Whether to enable GameScope Session.
-  #programs.steam.gamescopeSession = true; # Run a GameScope driven Steam session from your display-manager
 }
