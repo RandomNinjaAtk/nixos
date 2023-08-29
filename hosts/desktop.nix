@@ -95,6 +95,7 @@
     rustdesk
     distrobox
     # KDE
+    libsForQt5.kdeplasma-addons # addons
     libsForQt5.kmail # mail application
     libsForQt5.kontact # contacts application
     libsForQt5.discover # app store
