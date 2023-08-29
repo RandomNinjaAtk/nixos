@@ -95,11 +95,26 @@
     rustdesk
     distrobox
     # KDE
-    libsForQt5.kmail
-    libsForQt5.kontact
-    libsForQt5.discover
-    libsForQt5.kate
-    kdiskmark
+    libsForQt5.kmail # mail application
+    libsForQt5.kontact # contacts application
+    libsForQt5.discover # app store
+    libsForQt5.kate # kwrite
+    libsForQt5.kcalc # calculator
+    libsForQt5.filelight # disk usage analyzer
+    libsForQt5.korganizer # calendar/organizer
+    libsForQt5.akregator # rss feed reader
+    libsForQt5.kaddressbook # contact addressbook
+    libsForQt5.kweather # weather app
+    libsForQt5.neochat # matrix client
+    libsForQt5.tokodon # mastadon client
+    libsForQt5.kasts # podcast app
+    libsForQt5.plasmatube # youtube app
+    libsForQt5.krfb # Krfb Desktop Sharing (VNC)
+    libsForQt5.skanlite # scanner application
+    libsForQt5.ksystemlog # syslog viewer
+    kdiskmark # disk speed tester
+    libsForQt5.yakuake # dropdown console
+    isoimagewriter # iso image writer
   ];
 
   virtualisation = {
