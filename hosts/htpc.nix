@@ -11,11 +11,10 @@
   };
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   boot.supportedFilesystems = [ "ntfs" ];
-
+  boot.initrd.kernelModules = ["amdgpu"];
+  services.xserver.videoDrivers = ["amdgpu"];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -37,6 +36,8 @@
   systemd.services."autovt@tty1".enable = false; # autologin workaround (https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229)
 
   # hardware
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.cpu.amd.updateMicrocode = true;
   hardware.bluetooth.enable = true;
   hardware.opengl.enable = true;
   hardware.opengl.driSupport32Bit = true;
