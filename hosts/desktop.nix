@@ -77,6 +77,7 @@
     curl
     wget
     htop
+    packagekit
     signal-desktop
     discord
     rpi-imager
