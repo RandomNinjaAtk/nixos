@@ -51,7 +51,6 @@
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
   services.locate.enable = true; # enable locate services
-  services.packagekit.enable = true; # prevents error in discover app
 
   # Print Services
   services.printing.enable = true; # enable printing
@@ -101,10 +100,7 @@
     graphite-kde-theme # theme
     arc-kde-theme # theme
     nordic # theme
-    sweet-nova # theme
-    layan-kde # theme
-    qogir-kde # theme
-    catppuccin-kde # theme
+    libsForQt5.packagekit-qt
     libsForQt5.kdeplasma-addons # addons
     libsForQt5.kmail # mail application
     libsForQt5.kontact # contacts application
