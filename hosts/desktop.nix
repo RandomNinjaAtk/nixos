@@ -51,6 +51,7 @@
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
   services.locate.enable = true; # enable locate services
+  services.packagekit.enable = true; # enable packagekit for discover app
 
   # Print Services
   services.printing.enable = true; # enable printing
