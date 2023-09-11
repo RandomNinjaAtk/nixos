@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf install -y steam-devices
+
 echo "Setting up flatpak"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak -y install flathub \
