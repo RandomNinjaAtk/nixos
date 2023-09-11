@@ -8,6 +8,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak -y install flathub \
   com.valvesoftware.Steam \
   com.valvesoftware.SteamLink \
+  dev.lizardbyte.app.Sunshine \
   com.discordapp.Discord \
   org.signal.Signal \
   org.videolan.VLC \
@@ -33,6 +34,10 @@ flatpak -y install flathub \
 
 # Update flatpaks
 flatpak update -y
+
+# Sunshine Permissions
+sudo chown $USER /dev/uinput && echo 'KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/85-sunshine-input.rules
+sudo flatpak override --talk-name=org.freedesktop.Flatpak dev.lizardbyte.app.Sunshine
 
 echo "Exiting...."
 exit
