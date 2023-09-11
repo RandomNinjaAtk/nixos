@@ -5,8 +5,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak -y install flathub \
   com.valvesoftware.Steam \
   com.valvesoftware.SteamLink \
-  com.valvesoftware.Steam.CompatibilityTool.Boxtron \
-]  com.discordapp.Discord \  org.signal.Signal \
+  com.discordapp.Discord \
+  org.signal.Signal \
   org.videolan.VLC \
   tv.plex.PlexHTPC \
   com.plexamp.Plexamp \
