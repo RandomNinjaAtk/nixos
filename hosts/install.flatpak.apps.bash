@@ -6,11 +6,7 @@ flatpak -y install flathub \
   com.valvesoftware.Steam \
   com.valvesoftware.SteamLink \
   com.valvesoftware.Steam.CompatibilityTool.Boxtron \
-  com.github.Matoking.protontricks \
-  org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/stable \
-  com.valvesoftware.Steam.Utility.gamescope \
-  com.discordapp.Discord \
-  org.signal.Signal \
+]  com.discordapp.Discord \  org.signal.Signal \
   org.videolan.VLC \
   tv.plex.PlexHTPC \
   com.plexamp.Plexamp \
@@ -37,4 +33,3 @@ flatpak update -y
 
 echo "Exiting...."
 exit
-=
