@@ -1,7 +1,17 @@
 #!/usr/bin/bash
 
 sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf install -y steam-devices
+sudo dnf update -y --refresh
+sudo dnf install -y \
+  steam-devices \
+  openrgb \
+  openrgb-udev-rules
+  # steam
+
+# Multi Media Codecs:
+sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install -y lame\* --exclude=lame-devel
+sudo dnf -y group upgrade --with-optional Multimedia
 
 echo "Setting up flatpak"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -16,7 +26,6 @@ flatpak -y install flathub \
   com.plexamp.Plexamp \
   com.github.iwalton3.jellyfin-media-player \
   org.mozilla.Thunderbird \
-  org.mozilla.firefox \
   com.github.Eloston.UngoogledChromium \
   net.mediaarea.MediaInfo \
   com.bitwarden.desktop \
@@ -31,6 +40,8 @@ flatpak -y install flathub \
   org.musicbrainz.Picard \
   org.gnome.Firmware \
   io.missioncenter.MissionCenter
+  # org.mozilla.firefox \
+  # com.valvesoftware.Steam \
 
 # Update flatpaks
 flatpak update -y
