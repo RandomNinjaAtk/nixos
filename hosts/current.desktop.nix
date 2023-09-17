@@ -21,6 +21,7 @@
   hardware.cpu.amd.updateMicrocode = true;
   hardware.cpu.intel.updateMicrocode = true;
   hardware.bluetooth.enable = true;
+  hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
 
   # networking
