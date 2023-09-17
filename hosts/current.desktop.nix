@@ -5,6 +5,7 @@
     [
       #./services.sunshine.nix
       #./samba.nix
+      ./hardware.radeon.nix
     ];
 
   # Update to the latest kernel
@@ -17,8 +18,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # hardware
+  hardware.cpu.amd.updateMicrocode = true;
   hardware.cpu.intel.updateMicrocode = true;
   hardware.bluetooth.enable = true;
+  hardware.enableRedistributableFirmware = true;
 
   # networking
   networking.firewall.enable = false;
@@ -39,6 +42,19 @@
   services.fwupd.enable = true; # firmware updates
   services.locate.enable = true; # enable locate services
   services.packagekit.enable = true; # enable packagekit for discover app
+  
+  # Power
+  services.power-profiles-daemon.enable = false;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_BOOST_ON_BAT = 0;
+      CPU_SCALING_GOVERNOR_ON_BATTERY = "powersave";
+      START_CHARGE_THRESH_BAT0 = 90;
+      STOP_CHARGE_THRESH_BAT0 = 97;
+      RUNTIME_PM_ON_BAT = "auto";
+    };
+  };
 
   # Print Services
   services.printing.enable = true; # enable printing
@@ -65,8 +81,9 @@
     curl
     wget
     htop
+    clinfo
     glxinfo
-    gpu-viewer
+    vulkan-tools
     bitwarden
     signal-desktop
     discord
@@ -76,7 +93,6 @@
     thunderbird
     openrgb-with-all-plugins
     moonlight-qt
-    vmware-horizon-client
     plexamp
     plex-media-player
     jellyfin-media-player
@@ -110,6 +126,9 @@
     libsForQt5.yakuake # dropdown console
     isoimagewriter # iso image writer
   ];
+
+  # Remove packages
+  services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
 
   # Steam
   programs.steam = {
