@@ -39,7 +39,8 @@ flatpak -y install flathub \
   com.usebottles.bottles \
   org.musicbrainz.Picard \
   org.gnome.Firmware \
-  io.missioncenter.MissionCenter
+  io.missioncenter.MissionCenter \
+  com.mattjakeman.ExtensionManager
   # org.mozilla.firefox \
   # com.valvesoftware.Steam \
 
