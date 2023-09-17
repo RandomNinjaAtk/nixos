@@ -8,6 +8,21 @@ sudo dnf install -y \
   openrgb-udev-rules
   # steam
 
+# gnome
+sudo dnf install -y \
+  gnome-tweaks \
+  gnome-extensions-app \
+  gnome-shell-extension-system-monitor-applet \
+  gnome-shell-extension-gsconnect \
+  gnome-shell-extension-gamemode \
+  gnome-shell-extension-dash-to-panel \
+  gnome-shell-extension-blur-my-shell \
+  gnome-shell-extension-appindicator \
+  gnome-shell-extension-netspeed \
+  gnome-shell-extension-pop-shell
+  
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+
 # Multi Media Codecs:
 sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf install -y lame\* --exclude=lame-devel
@@ -41,6 +56,7 @@ flatpak -y install flathub \
   org.gnome.Firmware \
   io.missioncenter.MissionCenter \
   com.mattjakeman.ExtensionManager
+  #org.gnome.Extensions
   # org.mozilla.firefox \
   # com.valvesoftware.Steam \
 
