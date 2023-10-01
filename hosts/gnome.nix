@@ -109,6 +109,7 @@ in
     unstable.signal-desktop
     unstable.discord
     unstable.moonlight-qt
+    unstable.protonup-qt
     #### GNOME
     gnome.gnome-tweaks
     # EXTENSIONS
