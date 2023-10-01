@@ -86,14 +86,11 @@ in
     wget
     htop
     bitwarden
-    signal-desktop
-    discord
     rpi-imager
     chromium
     firefox
     thunderbird
     openrgb-with-all-plugins
-    moonlight-qt
     plexamp
     plex-media-player
     jellyfin-media-player
@@ -101,6 +98,7 @@ in
     element-desktop
     vlc
     nordic # theme
+    libreofficev
     # unstable packages
     unstable.sunshine
     unstable.rustdesk
@@ -108,6 +106,9 @@ in
     unstable.mission-center
     unstable.pegasus-frontend
     unstable.attract-mode
+    unstable.signal-desktop
+    unstable.discord
+    unstable.moonlight-qt
     #### GNOME
     gnome.gnome-tweaks
     # EXTENSIONS
