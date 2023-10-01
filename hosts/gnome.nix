@@ -98,7 +98,7 @@ in
     element-desktop
     vlc
     nordic # theme
-    libreofficev
+    libreoffice
     # unstable packages
     unstable.sunshine
     unstable.rustdesk
