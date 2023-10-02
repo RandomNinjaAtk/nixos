@@ -85,6 +85,7 @@ in
     curl
     wget
     htop
+    protonup-ng
     bitwarden
     rpi-imager
     chromium
