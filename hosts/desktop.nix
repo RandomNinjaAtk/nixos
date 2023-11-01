@@ -155,7 +155,7 @@ in
     gamescopeSession.enable = true; # Whether to enable GameScope Session.
   }; # steam
 
-  # Nix garbadge collection
+  # Nix garbage collection
   nix.gc = {
     automatic = true;
     dates = "weekly";
