@@ -1,57 +1,56 @@
 { config, pkgs, ... }:
-
+let
+  unstableTarball =
+    fetchTarball
+      https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;  
+in
 {
+
   imports =
-    [
-      ./services.sunshine.nix
-      ./samba.nix
+    [ # Include the results of the hardware scan.
+     # /etc/nixos/hardware-configuration.nix
     ];
 
-  # Update to the latest kernel
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      unstable = import unstableTarball {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
+
+  # Boot Options
   boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   boot.supportedFilesystems = [ "ntfs" ];
   boot.initrd.kernelModules = ["amdgpu"];
   services.xserver.videoDrivers = ["amdgpu"];
-    
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
+
   # hardware
-  hardware.cpu.intel.updateMicrocode = true;
-  hardware.cpu.amd.updateMicrocode = true;
   hardware.bluetooth.enable = true;
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true;
-  hardware.steam-hardware.enable = true;
+  hardware.enableAllFirmware = true;
+  hardware.enableRedistributableFirmware = true;
 
-  # networking
-  networking.firewall.enable = false;
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  
   # desktop environment
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.displayManager.defaultSession = "plasmawayland"; # plasma or plasmawayland or plasma-bigscreen-wayland or steam
-  services.xserver.desktopManager.plasma5.bigscreen.enable = true;
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
-  services.xserver.displayManager.sddm.enableHidpi = true; # enable automatic HiDPI mode
 
   # KDE specifics
   programs.partition-manager.enable = true; # kde partitioning tool
   programs.kdeconnect.enable = true; # kde connect services
 
+  # networking
+  networking.firewall.enable = false;
+
   # services
   services.openssh.enable = true; # ssh
   services.hardware.openrgb.enable = true; # openrgb
-  services.sunshine.enable = true; # custom sunshine module
   services.tailscale.enable = true; # tailscale
   services.fprintd.enable = true; # finger print reader
   services.flatpak.enable = true; # flatpak
   services.fwupd.enable = true; # firmware updates
   services.locate.enable = true; # enable locate services
-  services.packagekit.enable = true; # enable packagekit for discover app
 
   # Print Services
   services.printing.enable = true; # enable printing
@@ -74,35 +73,39 @@
   };
 
   # Packages
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-24.8.6"
+  ];
+
   environment.systemPackages = with pkgs; [
     curl
     wget
     htop
-    packagekit
-    signal-desktop
-    discord
-    rpi-imager
+    protonup-ng
+    bitwarden
     chromium
     firefox
     thunderbird
-    openrgb-with-all-plugins
-    moonlight-qt
-    vmware-horizon-client
     plexamp
     plex-media-player
     jellyfin-media-player
     kodi
     element-desktop
     vlc
-    rustdesk
-    distrobox
-    # KDE
-    plasma-overdose-kde-theme # theme
-    materia-kde-theme # theme
-    graphite-kde-theme # theme
-    arc-kde-theme # theme
     nordic # theme
-    libsForQt5.packagekit-qt
+    libreoffice
+    # unstable packages
+    unstable.sunshine
+    unstable.rustdesk
+    unstable.newsflash
+    unstable.mission-center
+    unstable.pegasus-frontend
+    unstable.attract-mode
+    unstable.signal-desktop
+    unstable.discord
+    unstable.moonlight-qt
+    unstable.protonup-qt
+    # KDE
     libsForQt5.kdeplasma-addons # addons
     libsForQt5.kaccounts-integration
     libsForQt5.kaccounts-providers
@@ -128,28 +131,34 @@
     isoimagewriter # iso image writer
   ];
 
-  virtualisation = {
-    podman = {
-      enable = true;
+  # Remove packages
+  services.xserver.excludePackages = [ pkgs.xterm ]; # remove xterm
 
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = true;
-
-      # Required for containers under podman-compose to be able to talk to each other.
-      defaultNetwork.settings.dns_enabled = true;
-      # For Nixos version > 22.11
-      #defaultNetwork.settings = {
-      #  dns_enabled = true;
-      #};
+  # Programs
+  programs.gamemode.enable = true;
+  programs.dconf.enable = true;
+  
+  programs.firefox = {                  
+    enable = true;
+    preferences = {
+    "widget.use-xdg-desktop-portal.file-picker" = 1;
+    "widget.use-xdg-desktop-portal.mime-handler" = 1;
     };
   };
 
-  # Programs
-  programs.gamescope.enable = true; # install gamescope
+
+  # Steam
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     gamescopeSession.enable = true; # Whether to enable GameScope Session.
   }; # steam
+
+  # Nix garbadge collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
 }
