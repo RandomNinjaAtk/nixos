@@ -5,7 +5,9 @@ with lib;
 let
 
   cfg = config.services.sunshine;
-  unstable = import (fetchTarball https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz) {config.allowUnfree = true;};
+  unstableTarball =
+    fetchTarball
+      https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;  
 in
 
 {
@@ -19,13 +21,23 @@ in
 
   config = mkIf config.services.sunshine.enable {
 
-    environment.systemPackages = with pkgs; [ unstable.sunshine ];
-
+    nixpkgs.config = {
+      packageOverrides = pkgs: {
+        unstable = import unstableTarball {
+          config = config.nixpkgs.config;
+        };
+      };
+    };
+  
+    environment.systemPackages = with pkgs; [
+      unstable.sunshine
+    ];  
+  
     security.wrappers.sunshine = {
       owner = "root";
       group = "root";
       capabilities = "cap_sys_admin+p";
-      source = "${pkgs.sunshine}/bin/sunshine";
+      source = "${pkgs.unstable.sunshine}/bin/sunshine";
     };
 
     # Requires to simulate input
