@@ -95,7 +95,6 @@ in
     nordic # theme
     libreoffice
     # unstable packages
-    unstable.sunshine
     unstable.rustdesk
     unstable.newsflash
     unstable.mission-center
