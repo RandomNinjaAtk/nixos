@@ -37,6 +37,8 @@ in
 
   # desktop environment
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
+  services.xserver.desktopManager.plasma5.bigscreen.enable = true; # allow use of bigscreen
+  services.xserver.displayManager.defaultSession = "plasmawayland"; #plasma or plasmawayland or plasma-bigscreen-wayland or steam
 
   # KDE specifics
   programs.partition-manager.enable = true; # kde partitioning tool
