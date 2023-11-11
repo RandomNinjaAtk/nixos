@@ -8,8 +8,12 @@ in
 
   imports =
     [ # Include the results of the hardware scan.
-     # /etc/nixos/hardware-configuration.nix
       ./services.sunshine.nix
+      # Add Hardware Channel
+      # sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+      # sudo nix-channel --update
+      <nixos-hardware/framework/13-inch/7040-amd>
+      ./hardware-configuration.nix
     ];
 
   nixpkgs.config = {
@@ -39,6 +43,16 @@ in
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
   services.xserver.desktopManager.plasma5.bigscreen.enable = true; # allow use of bigscreen
   services.xserver.displayManager.defaultSession = "plasmawayland"; #plasma or plasmawayland or plasma-bigscreen-wayland or steam
+
+  # Default applications
+  xdg.mime.defaultApplications = {
+    "text/html" = "firefox.desktop";
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "x-scheme-handler/about" = "firefox.desktop";
+    "x-scheme-handler/unknown" = "firefox.desktop";
+    "application/pdf" = "firefox.desktop";
+  };
 
   # KDE specifics
   programs.partition-manager.enable = true; # kde partitioning tool
