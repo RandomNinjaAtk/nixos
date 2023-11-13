@@ -100,6 +100,7 @@ in
     curl
     wget
     htop
+    pciutils
     protonup-ng
     bitwarden
     chromium
