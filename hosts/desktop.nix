@@ -81,6 +81,7 @@ in
     curl
     wget
     htop
+    pciutils
     protonup-ng
     bitwarden
     chromium
@@ -94,7 +95,10 @@ in
     vlc
     nordic # theme
     libreoffice
+    google-chrome
+    ventoy-full
     # unstable packages
+    unstable.sunshine
     unstable.rustdesk
     unstable.newsflash
     unstable.mission-center
@@ -154,7 +158,11 @@ in
     gamescopeSession.enable = true; # Whether to enable GameScope Session.
   }; # steam
 
-  # Nix garbage collection
+  # android
+  programs.adb.enable = true;
+  users.users.user.extraGroups = ["adbusers"];
+
+  # Nix garbadge collection
   nix.gc = {
     automatic = true;
     dates = "weekly";
