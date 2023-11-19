@@ -149,7 +149,6 @@ in
     };
   };
 
-
   # Steam
   programs.steam = {
     enable = true;
@@ -158,7 +157,7 @@ in
     gamescopeSession.enable = true; # Whether to enable GameScope Session.
   }; # steam
 
-  # android
+  # android flashing support
   programs.adb.enable = true;
   users.users.user.extraGroups = ["adbusers"];
 
