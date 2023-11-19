@@ -95,7 +95,6 @@ in
     vlc
     nordic # theme
     libreoffice
-    google-chrome
     ventoy-full
     # unstable packages
     unstable.sunshine
