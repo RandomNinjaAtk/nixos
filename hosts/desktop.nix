@@ -160,10 +160,19 @@ in
   programs.adb.enable = true;
   users.users.user.extraGroups = ["adbusers"];
 
-  # Nix garbadge collection
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
+  # automatic upgrade
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = true;
+  };
+
+  # clean system
+  nix = {
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
   };
 }
