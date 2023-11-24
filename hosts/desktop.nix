@@ -73,9 +73,9 @@ in
   };
 
   # Packages
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-24.8.6"
-  ];
+  #nixpkgs.config.permittedInsecurePackages = [
+  #  "electron-24.8.6"
+  #];
 
   environment.systemPackages = with pkgs; [
     curl
