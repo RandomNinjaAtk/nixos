@@ -29,8 +29,7 @@ in
 
     [org.gnome.desktop.interface]
     cursor-theme='Dracula-cursors'
-    icons-theme='Dracula'
-    shell-theme='Dracula'
+    icon-theme='Dracula'
     gtk-theme='Dracula'
     color-scheme='prefer-dark'
 
