@@ -28,8 +28,9 @@ in
     experimental-features=['scale-monitor-framebuffer']
 
     [org.gnome.desktop.interface]
-    cursor-theme='Dracula'
+    cursor-theme='Dracula-cursors'
     icon-theme='Dracula'
+    shell-theme='Dracula'
     gtk-theme='Dracula'
     color-scheme='prefer-dark'
 
