@@ -1,4 +1,4 @@
 {pkgs, ...}: {
   # enable ssh
-  hservices.openssh.enable = true;
+  services.openssh.enable = true;
 }
