@@ -28,7 +28,10 @@ in
     experimental-features=['scale-monitor-framebuffer']
 
     [org.gnome.desktop.interface]
+    cursor-theme='Dracula'
+    icon-theme='Dracula'
     gtk-theme='Dracula'
+    color-scheme='prefer-dark'
 
     [org.gnome.desktop.wm.preferences]
     button-layout=':minimize,maximize,close'
