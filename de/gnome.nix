@@ -28,18 +28,18 @@ in
     experimental-features=['scale-monitor-framebuffer']
 
     [org.gnome.desktop.interface]
-    cursor-theme='Dracula-cursors'
-    icon-theme='Dracula'
-    gtk-theme='Dracula'
+    clock-show-seconds=true
+    enable-animations=true
+    gtk-theme='Adwaita-dark'
+    icon-theme='Adwaita'
     color-scheme='prefer-dark'
 
     [org.gnome.desktop.wm.preferences]
     button-layout=':minimize,maximize,close'
     resize-with-right-button=true
-    theme='Dracula'
 
     [org.gnome.desktop.interface.icon-theme]
-    theme='Dracula'
+    theme='Adwaita'
 
     [org.gnome.SessionManager]
     auto-save-session=true
