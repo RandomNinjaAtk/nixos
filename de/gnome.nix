@@ -30,7 +30,7 @@ in
     [org.gnome.desktop.interface]
     clock-show-seconds=true
     enable-animations=true
-    gtk-theme='Adwaita-dark'
+    gtk-theme='Adwaita'
     icon-theme='Adwaita'
     color-scheme='prefer-dark'
 
@@ -77,10 +77,6 @@ in
     gnome-photos
     gnome-usage
     # THEMES
-    dracula-theme
-    dracula-icon-theme
-    nordic
     gnome.adwaita-icon-theme
-    beauty-line-icon-theme
   ];
 }
