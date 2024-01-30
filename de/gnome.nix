@@ -48,6 +48,12 @@ in
 
     [org.gtk.Settings.FileChooser]
     sort-directories-first=true
+
+    [org.gnome.shell.weather]
+    automatic-location=true
+
+    [org.gnome.system.location]
+    enabled=true
   '';
 
   # https://github.com/rhoriguchi/nixos-setup/blob/master/modules/profiles/gnome.nix
