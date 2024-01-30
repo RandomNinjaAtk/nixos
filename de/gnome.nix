@@ -34,6 +34,7 @@ in
     icon-theme='Adwaita'
     color-scheme='prefer-dark'
     clock-format='12h'
+    show-battery-percentage=true
 
     [org.gnome.desktop.wm.preferences]
     button-layout=':minimize,maximize,close'
