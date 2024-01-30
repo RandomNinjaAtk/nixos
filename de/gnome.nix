@@ -77,6 +77,7 @@ in
     gnome.gnome-boxes
     gnome-photos
     gnome-usage
+    gnome.dconf-editor
     # THEMES
     gnome.adwaita-icon-theme
   ];
