@@ -33,6 +33,7 @@ in
     gtk-theme='Adwaita'
     icon-theme='Adwaita'
     color-scheme='prefer-dark'
+    clock-format='12h'
 
     [org.gnome.desktop.wm.preferences]
     button-layout=':minimize,maximize,close'
