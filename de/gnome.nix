@@ -54,6 +54,10 @@ in
 
     [org.gnome.system.location]
     enabled=true
+    
+    [org.gnome.shell.world-clocks]
+    locations=[<(uint32 2, <('Seattle', 'KBFI', true, [(0.82983133145337307, -2.134775231953554)], [(0.83088509144255718, -2.135097419733472)])>)>, <(uint32 2, <('Lafayette', 'KLFT', true, [(0.52712821531826681, -1.6055817161715245)], [(0.52750988391909293, -1.6060492375182565)])>)>, <(uint32 2, <('New York', 'KNYC', true, [(0.71180344078725644, -1.2909618758762367)], [(0.71059804659265924, -1.2916478949920254)])>)>]
+
   '';
 
   # https://github.com/rhoriguchi/nixos-setup/blob/master/modules/profiles/gnome.nix
