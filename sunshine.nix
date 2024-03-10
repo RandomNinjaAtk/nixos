@@ -5,7 +5,9 @@ with lib;
 let
 
   cfg = config.services.sunshine;
-
+  unstableTarball =
+    fetchTarball
+      https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;  
 in
 
 {
@@ -19,36 +21,46 @@ in
 
   config = mkIf config.services.sunshine.enable {
 
-    # Install sunshine
-    environment.systemPackages = with pkgs; [ sunshine ];
+    nixpkgs.config = {
+      packageOverrides = pkgs: {
+        unstable = import unstableTarball {
+          config = config.nixpkgs.config;
+        };
+      };
+    };
   
+    environment.systemPackages = with pkgs; [
+      unstable.sunshine
+    ];  
+  
+    security.wrappers.sunshine = {
+      owner = "root";
+      group = "root";
+      capabilities = "cap_sys_admin+p";
+      source = "${pkgs.unstable.sunshine}/bin/sunshine";
+    };
+
     # Requires to simulate input
     boot.kernelModules = [ "uinput" ];
     services.udev.extraRules = ''
       KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
     '';
 
-    security.wrappers.sunshine = {
-      owner = "root";
-      group = "root";
-      capabilities = "cap_sys_admin+p";
-      source = "${pkgs.sunshine}/bin/sunshine";
-    };
-    
-    systemd.user.services.sunshine = {
-      description = "Sunshine self-hosted game stream host for Moonlight.";
-      startLimitIntervalSec = 500;
-      startLimitBurst = 5;
-      wantedBy = [ "graphical-session.target" ];
-  
-      serviceConfig = {
-        Restart = "on-failure";
-        RestartSec = "5s";
-        ExecStart = "${config.security.wrapperDir}/sunshine";
+    systemd.user.services.sunshine =
+      {
+        description = "sunshine";
+        wantedBy = [ "graphical-session.target" ];
+        serviceConfig = {
+          ExecStart = "${config.security.wrapperDir}/sunshine";
+        };
       };
-    };
+
   };
 }
 
+# Enable using:
+# services.sunshine.enable = true;
 # Get Service Status
-# systemctl --user restart sunshine
+# systemctl --user status sunshine
+# get logs
+# journalctl --user -u sunshine --since "2 minutes ago"
