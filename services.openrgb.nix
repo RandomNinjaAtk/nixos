@@ -4,7 +4,6 @@ let
   cfg = config.services.openrgb;
 in
 {
-    
   options = {
     services.openrgb = {
       enable = mkEnableOption (mdDoc "OpenRGB");
@@ -17,7 +16,7 @@ in
       package = pkgs.openrgb-with-all-plugins;
     };
     systemd.user.services.openrgb = {
-      description = "openrgbstart";
+      description = "OpenRGB";
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
         ExecStart = "${pkgs.openrgb-with-all-plugins}/bin/openrgb --startminimized";
