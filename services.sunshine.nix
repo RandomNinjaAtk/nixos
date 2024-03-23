@@ -1,26 +1,19 @@
 { config, lib, pkgs, ... }:
-
 with lib;
-
 let
-
   cfg = config.services.sunshine;
   unstableTarball =
     fetchTarball
       https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;  
 in
-
 {
   options = {
-
     services.sunshine = {
       enable = mkEnableOption (mdDoc "Sunshine");
     };
-
   };
 
   config = mkIf config.services.sunshine.enable {
-
     nixpkgs.config = {
       packageOverrides = pkgs: {
         unstable = import unstableTarball {
@@ -54,7 +47,6 @@ in
           ExecStart = "${config.security.wrapperDir}/sunshine";
         };
       };
-
   };
 }
 
