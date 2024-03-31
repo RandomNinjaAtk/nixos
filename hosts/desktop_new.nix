@@ -8,8 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #./services.sunshine.nix
-      ./services.openrgb.nix
     ];
 
   # Bootloader.
@@ -53,6 +51,7 @@
   services.xserver.displayManager.defaultSession = "plasmawayland";
   services.xserver.displayManager.sddm.autoNumlock = true; # enable numlock
 
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -64,7 +63,6 @@
   services.printing.drivers = [ 
     pkgs.cnijfilter2 # G6000 Series Print Driver
   ];
-
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -98,17 +96,14 @@
       signal-desktop
       bitwarden
       libreoffice
-      steam-rom-manager
       moonlight-qt
-      pegasus-frontend
-      retroarchFull
       # kde
       libsForQt5.kcalc
     ];
   };
-  
+
   # boot specifics
-  #boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
+  boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
   boot.plymouth.enable = true;
   boot.initrd.kernelModules = ["amdgpu"];
   services.xserver.videoDrivers = [ "amdgpu" ];
@@ -137,7 +132,7 @@
 
   # Custom Services
   #services.sunshine.enable = true; # enable sunshine and autostart
-  services.openrgb.enable = true; # enable openrgb and autostart
+  #services.openrgb.enable = true; # enable openrgb and autostart
 
   programs.dconf.enable = true;
   programs.firefox = {                  
@@ -145,6 +140,15 @@
     preferences = {
     "widget.use-xdg-desktop-portal.file-picker" = 1;
     "widget.use-xdg-desktop-portal.mime-handler" = 1;
+    };
+    policies = {
+      PasswordManagerEnabled = false;
+      DontCheckDefaultBrowser = true;
+      DisplayBookmarksToolbar = "always"; # alternatives: "always" or "newtab"
+      DisablePocket = true;
+      NoDefaultBookmarks = true;
+      Homepage.URL = "https://www.google.com";
+      ShowHomeButton = true;
     };
   };
 
@@ -155,7 +159,6 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     gamescopeSession.enable = true; # enables gamescope
   };
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -168,6 +171,9 @@
     wget
     curl
     clinfo
+    glxinfo
+    vulkan-tools
+    wayland-utils
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
