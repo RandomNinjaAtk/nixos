@@ -13,9 +13,10 @@ in
     };
   };
 
-  #boot.initrd.kernelModules = [ "amdgpu" ];
-  #services.xserver.videoDrivers = [ "amdgpu" ];
-
+  # boot changes
+  boot.kernelPackages = pkgs.linuxPackages_latest; # kernel update
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Information: https://wiki.nixos.org/wiki/AMD_GPU
   hardware.graphics = {
