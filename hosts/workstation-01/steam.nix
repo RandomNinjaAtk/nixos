@@ -13,6 +13,11 @@ in
     };
   };
   
+  environment.systemPackages = with pkgs; [
+    unstable.steam-devices-udev-rules # steam udev rules for controllers
+    #unstable.game-devices-udev-rules # udev rules for controllers
+  ];
+  
   # steam
   programs.steam = {
     enable = true;
@@ -22,14 +27,6 @@ in
     protontricks.enable = true; # Whether to enable protontricks, a simple wrapper for running Winetricks commands for Proton-enabled games.
   };
  
-  # https://github.com/fabiscafe/game-devices-udev
-  services = {
-    udev = {
-      packages = with pkgs; [
-        game-devices-udev-rules
-      ];
-    };
-  };
   hardware.uinput.enable = true;
 
   #systemd.user.services.steam = {
