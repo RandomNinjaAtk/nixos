@@ -16,7 +16,7 @@ in
   # more info: https://wiki.nixos.org/wiki/GNOME
   
   services.xserver = {
-    enable = false; # enable x11?
+    enable = false;
     displayManager.gdm = {
       enable = true;
       wayland = true;
@@ -25,6 +25,16 @@ in
       enable = true;
     };
   };
+  
+  services.gnome = {
+    gnome-remote-desktop.enable = true;
+    gnome-online-accounts.enable = true;
+    gnome-user-share.enable = true;
+    sushi.enable = true;
+    localsearch.enable = true;
+    games.enable = true;
+  };
+  
   
   # ensure gnome-settings-daemon udev rules are enabled: 
   services.udev.packages = [ pkgs.gnome-settings-daemon ];
@@ -51,23 +61,22 @@ in
     gnomeExtensions.blur-my-shell
     gnomeExtensions.hot-edge
     gnomeExtensions.arcmenu
-    # other apps
-    gnome-randr
+    # icons/theme
     adwaita-icon-theme
     gnome-themes-extra
+    # other apps
+    gnome-randr
     gnome-extension-manager
     gnome-menus
     dconf-editor
   ];
-  
-  services.dbus.packages = with pkgs; [ gnome2.GConf ];
   
   # dconf settings
   programs.dconf = {
     enable = true;
     profiles.user.databases = [
       {
-        lockAll = true; # prevents overriding
+        lockAll = false; # prevents overriding
         # for monitoring gnome changes: dconf watch /
         settings = with lib.gvariant; {
           "org/gnome/mutter" = {
